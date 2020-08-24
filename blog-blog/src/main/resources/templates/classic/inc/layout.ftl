@@ -42,27 +42,12 @@
             jQuery('.fsb-slider').fsbslider({"animation_time":100,"animation_type":"crossfade","pattern":false});
         });
     </script>
-    <script src="${base}/dist/js/rainyday.js"></script>
-    <script>
-        function run() {
-            let image = document.getElementById('background');
-            image.onload = function() {
-                var engine = new RainyDay({
-                    image: this
-                });
-                engine.rain([ [3, 2, 2] ], 100);
-            };
-            image.crossOrigin = 'anonymous';
-            <#list options['site_background']?split(",") as url>
-            image.src = "${url}";
-            </#list>
-        }
-    </script>
 </head>
 <body onload="run();">
 <ul class="fsb-slider">
-
-    <li><span><img id="background" src="" alt="img1"></span></li>
+    <#list options['site_background']?split(",") as url>
+        <li><span><img src="${url}" alt="img1"></span></li>
+    </#list>
 </ul>
     <!-- header -->
     <#include "/classic/inc/header.ftl"/>
