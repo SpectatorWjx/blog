@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    #dev本地，prod 正式，test 测试
+    active: dev
+  resources:
+    static-locations: file:/home/blog/resources/static

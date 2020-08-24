@@ -1,0 +1,99 @@
+server:
+  port: 8083
+  use-forward-headers: true
+spring:
+  devtools:
+    enabled: true
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:ehcache.xml
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  freemarker:
+    template-loader-path:
+      - classpath:/templates
+    cache: false
+    check-template-location: true
+    charset: utf-8
+    settings:
+      classic_compatible: true #处理空值
+      template_exception_handler: rethrow
+      template_update_delay: 0
+      datetime_format: yyyy-MM-dd HH:mm
+      number_format: 0.##
+      auto_import: /utils.ftl as utils
+  flyway:
+    enabled: false
+    baseline-on-migrate: true
+    encoding: UTF-8
+    locations: classpath:scripts/migration
+  datasource:
+    #schema: classpath*:scripts/schema.sql
+    #continue-on-error: false
+    #sql-script-encoding: utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.18.0.2:3306/blog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 10
+      max-lifetime: 30000
+  jpa:
+    database: mysql
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  data: #mongoDB配
+    mongodb:
+      file:
+        uri: mongodb://root:123456@172.18.0.4:27017/file
+#安全框架
+shiro:
+  web:
+    enabled: true
+  annotations:
+    enabled: false
+  loginUrl: /login
+  successUrl: /index
+  unauthorizedUrl: /reject
+  sessionManager:
+    cookie:
+      maxAge: 604800
+  rememberMeManager:
+    cookie:
+      maxAge: 604800
+logging:
+  level:
+    org.springframework: WARN
+    org.hibernate: WARN
+
+# site.options.theme: classic
+site:
+  version: 1.0.0
+  location: ${user.dir}
+  controls:
+    # 注册开关
+    register: true
+    # 注册开启邮箱验证
+    register_email_validate: false
+    # 发布文章开关
+    post: true
+    # 评论开关
+    comment: true
+  options:
+    theme: classic
+    storage_max_width: 800
+    storage_limit_size: 20
+    editor: markdown
+    thumbnail_channel_size: 200x112
+    thumbnail_post_size: 360x200

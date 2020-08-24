@@ -1,0 +1,154 @@
+/************************************************************
+* Filename: style.css										*
+* Title: Full Screen Background Slider						*
+* Description: Custom CSS file								*
+* Author: Pantherius										*
+* Author Page: http://codecanyon.net/user/pantherius		*
+* Website: http://sympies.com								*
+*															*
+* release date: 14-08-2013									*
+*															*
+************************************************************/
+
+/*						SLIDESHOW STYLE						*/
+ul.fsb-slider
+{
+	list-style: none;
+}
+
+.fsb-slider,
+.fsb-slider:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.fsb-slider.hidepattern:after {
+    content: '';
+    background: none !important;
+}
+
+.fsb-slider li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+}
+
+/* Cross Fade Effect */
+
+@-webkit-keyframes crossfade { 
+	0% {
+	    opacity: 0;
+	    -webkit-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 0.2;
+	    -webkit-transform: scale(1.05);
+	    -webkit-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 0.5;
+	    -webkit-transform: scale(1.1) rotate(3deg);
+	}
+	35% {
+	    opacity: 0.7;
+	    -webkit-transform: scale(1.2) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-moz-keyframes crossfade { 
+	0% {
+	    opacity: 0;
+	    -moz-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 0.2;
+	    -moz-transform: scale(1.05);
+	    -moz-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 0.5;
+	    -moz-transform: scale(1.1) rotate(3deg);
+	}
+	35% {
+	    opacity: 0.7;
+	    -moz-transform: scale(1.2) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-o-keyframes crossfade { 
+	0% {
+	    opacity: 0;
+	    -o-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 0.2;
+	    -o-transform: scale(1.05);
+	    -o-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 0.5;
+	    -o-transform: scale(1.1) rotate(3deg);
+	}
+	35% {
+	    opacity: 0.7;
+	    -o-transform: scale(1.2) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@-ms-keyframes crossfade { 
+	0% {
+	    opacity: 0;
+	    -ms-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 0.2;
+	    -ms-transform: scale(1.05);
+	    -ms-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 0.5;
+	    -ms-transform: scale(1.1) rotate(3deg);
+	}
+	35% {
+	    opacity: 0.7;
+	    -ms-transform: scale(1.2) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+@keyframes crossfade { 
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 0.2;
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 0.5;
+	    transform: scale(1.1) rotate(3deg);
+	}
+	35% {
+	    opacity: 0.7;
+	    transform: scale(1.2) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+
+/* Show at least something when animations not supported */
+.no-cssanimations .fsb-slider li span{
+	opacity: 0.5;
+}
