@@ -42,7 +42,7 @@
             jQuery('.fsb-slider').fsbslider({"animation_time":100,"animation_type":"crossfade","pattern":false});
         });
     </script>
-    <script src="/dist/js/rainyday.js"></script>
+    <script src="${base}/dist/js/rainyday.js"></script>
     <script>
         function run() {
             let image = document.getElementById('background');
@@ -59,7 +59,7 @@
         }
     </script>
 </head>
-<body>
+<body onload="run();">
 <ul class="fsb-slider">
 
     <li><span><img id="background" src="" alt="img1"></span></li>
