@@ -66,7 +66,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="col-sm-2 control-label">Banner</label>
+        <label class="col-sm-2 control-label">静态资源</label>
         <div class="col-sm-6">
             <input type="text" name="site_version" class="form-control" value="${options['site_version']}" placeholder="请输入博客版本">
         </div>

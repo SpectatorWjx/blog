@@ -84,8 +84,8 @@
     </div>
     <canvas id="canvas"></canvas>
   </div>
-  <script src="/dist/js/hovertreewelcome.js"></script>
-  <script src="/dist/js/canvas.js"></script>
+  <script src="${options['site_version']}/dist/js/hovertreewelcome.js"></script>
+  <script src="${options['site_version']}/dist/js/canvas.js"></script>
   <style>
     #canvas {
       position: fixed;

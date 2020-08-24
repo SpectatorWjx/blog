@@ -9,25 +9,7 @@
 */
 
 define(function(require, exports, module) {
-    var plugins = require('plugins');
 	var Authc = require('authc');
-
-    var wpexLocalize = {
-    		"mobileMenuOpen" : "Click here to navigate",
-    		"mobileMenuClosed" : "Close navigation",
-    		"isOriginLeft" : "1"
-    	};
-    
-    // 图片懒加载
-    // var imagesLazyload = function () {
-    // 	require.async('lazyload', function () {
-    // 		$("img").lazyload({
-	//    	   		 placeholder: _MTONS.BASE_PATH + '/dist/images/spinner.gif',
-	//    	   		 effect: "fadeIn"
-	//    	   	});
-    //     });
-    // }
-    
     // 返回顶部
     var backToTop = function () {
     	var $window = $(window);

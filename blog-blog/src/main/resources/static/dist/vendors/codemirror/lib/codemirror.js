@@ -1935,7 +1935,7 @@
       if (endStyle) { fullStyle += endStyle; }
       var token = elt("span", [content], fullStyle, css);
       if (attributes) {
-        for (var attr in attributes) { if (attributes.hasOwnProperty(attr) && attr != "style" && attr != "class")
+        for (var attr in attributes) { if (attributes.hasOwnProperty(attr) && attr != "static.dist.css.style" && attr != "class")
           { token.setAttribute(attr, attributes[attr]); } }
       }
       return builder.content.appendChild(token)

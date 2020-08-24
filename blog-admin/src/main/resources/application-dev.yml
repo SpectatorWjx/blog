@@ -40,9 +40,9 @@ spring:
     #continue-on-error: false
     #sql-script-encoding: utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://106.75.119.17:3306/blog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/blog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
-    password: 123456
+    password: root
     hikari:
       minimum-idle: 3
       maximum-pool-size: 10
@@ -56,7 +56,7 @@ spring:
   data: #mongoDB配
     mongodb:
       file:
-        uri: mongodb://root:123456@118.31.57.194:37017/file
+        uri: mongodb://root:root@localhost:27017/file
 #安全框架
 shiro:
   web:

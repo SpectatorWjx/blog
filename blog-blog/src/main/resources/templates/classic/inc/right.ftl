@@ -51,8 +51,8 @@
 	</div>
 	<div class="text-center"><a href="${base}/tags" nav="tags"><i class="fa fa-hand-o-right">所有标签</i></a></div>
 </div>
-<script src="/dist/js/draggabilly.pkgd.min.js"></script>
-<script src="/dist/js/elastiStack.js"></script>
+<script src="${options['site_version']}/dist/js/draggabilly.pkgd.min.js"></script>
+<script src="${options['site_version']}/dist/js/elastiStack.js"></script>
 <script>
 	new ElastiStack( document.getElementById( 'elasticstack' ) );
 </script>

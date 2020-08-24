@@ -14,9 +14,9 @@
     <meta property="og:image" content="https://delpast.com/logo.png" />
     <meta property="og:url" content="https://delpast.com.com/" />
     <title>旁观者的博客 - ${options['site_name']}</title>
-    <link rel="shortcut icon" href="/dist/images/logo/m.png">
+    <link rel="shortcut icon" href="${options['site_version']}/dist/images/logo/m.png">
     <link rel="stylesheet" href="https://www.bootcss.com/p/buttons/css/buttons.css">
-    <link rel="stylesheet" id="patternfly-adjusted-css" href="/dist/css/app.css"
+    <link rel="stylesheet" id="patternfly-adjusted-css" href="${options['site_version']}/dist/css/app.css"
           type="text/css" media="all">
     <link href="https://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 

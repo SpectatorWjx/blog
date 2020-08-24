@@ -426,7 +426,7 @@
                         ? 'paragraph'
                         : 'html',
                     pre: !this.options.sanitizer
-                        && (cap[1] === 'pre' || cap[1] === 'script' || cap[1] === 'style'),
+                        && (cap[1] === 'pre' || cap[1] === 'script' || cap[1] === 'static.dist.css.style'),
                     text: cap[0]
                 });
                 continue;

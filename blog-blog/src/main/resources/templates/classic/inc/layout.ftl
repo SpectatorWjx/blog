@@ -16,10 +16,10 @@
 
     <title>${title} - ${options['site_name']}</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="/dist/css/editor.css" rel="stylesheet"/>
-    <link href="/dist/css/plugins.css" rel="stylesheet"/>
-    <link href="/dist/css/full_screen_background_slider.css" rel="stylesheet"/>
-    <link href="${base}/theme/classic/dist/css/style.css" rel="stylesheet"/>
+    <link href="${options['site_version']}/dist/css/editor.css" rel="stylesheet"/>
+    <link href="${options['site_version']}/dist/css/plugins.css" rel="stylesheet"/>
+    <link href="${options['site_version']}/dist/css/full_screen_background_slider.css" rel="stylesheet"/>
+    <link href="${options['site_version']}/dist/css/style.css" rel="stylesheet"/>
     <link href="https://cdn.bootcss.com/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet"/>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="<@resource src=options['site_favicon']/>" rel="apple-touch-icon-precomposed" />
@@ -33,10 +33,10 @@
         _MTONS.BASE_PATH = '${base}';
         _MTONS.LOGIN_TOKEN = '${profile.id}';
     </script>
-    <script src="/dist/js/sea.js"></script>
-    <script src="/dist/js/sea.config.js"></script>
-    <script src="/dist/js/modernizr.custom.js"></script>
-    <script src="/dist/js/slider.js"></script>
+    <script src="${options['site_version']}/dist/js/sea.js"></script>
+    <script src="${options['site_version']}/dist/js/sea.config.js"></script>
+    <script src="${options['site_version']}/dist/js/modernizr.custom.js"></script>
+    <script src="${options['site_version']}/dist/js/slider.js"></script>
     <script type='text/javascript'>
         jQuery(document).ready(function() {
             jQuery('.fsb-slider').fsbslider({"animation_time":100,"animation_type":"crossfade","pattern":false});

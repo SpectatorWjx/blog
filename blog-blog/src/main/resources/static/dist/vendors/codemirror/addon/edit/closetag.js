@@ -117,7 +117,7 @@
         if (cm.getMode().name == "htmlmixed" && inner.mode.name == "javascript")
           replacement = head + "script";
         else if (cm.getMode().name == "htmlmixed" && inner.mode.name == "css")
-          replacement = head + "style";
+          replacement = head + "static.dist.css.style";
         else
           return CodeMirror.Pass;
       } else {
