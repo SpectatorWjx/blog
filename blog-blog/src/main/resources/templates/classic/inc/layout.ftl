@@ -43,7 +43,7 @@
         });
     </script>
 </head>
-<body onload="run();">
+<body>
 <ul class="fsb-slider">
     <#list options['site_background']?split(",") as url>
         <li><span><img src="${url}" alt="img1"></span></li>

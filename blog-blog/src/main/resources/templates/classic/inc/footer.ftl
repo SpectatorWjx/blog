@@ -40,5 +40,3 @@
         }
     });
 </script>
-<!--樱花特效-->
-<script src="${options['site_version']}/dist/js/sakura.js"></script>
