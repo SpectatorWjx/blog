@@ -1,10 +1,10 @@
 <#--noinspection JSValidateTypes-->
 <#if view>
-<#include "/classic/inc/layout.ftl"/>
+<#include "/classic/inc/layout_post.ftl"/>
 <#assign title = view.title />
 <#assign keyword = view.title />
 <#assign description = view.title+', '+view.summary />
-<@layout title keyword description>
+<@layout_post title keyword description>
 <div class="row main">
     <div class="col-xs-12 col-md-9 side-left topics-show">
         <!-- view show -->
@@ -273,7 +273,7 @@
         z-index: 1;
     }
 </style>
-</@layout>
+</@layout_post>
 <#else>
     <#include "/classic/404.ftl"/>
 </#if>

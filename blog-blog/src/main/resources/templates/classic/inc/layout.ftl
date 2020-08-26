@@ -46,7 +46,11 @@
 <body>
 <ul class="fsb-slider">
     <#list options['site_background']?split(",") as url>
-        <li><span><img src="${url}" alt="img1"></span></li>
+        <li>
+            <span>
+                <img src="${url}" alt="img1">
+            </span>
+        </li>
     </#list>
 </ul>
     <!-- header -->
