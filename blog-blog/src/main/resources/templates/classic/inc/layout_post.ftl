@@ -40,10 +40,10 @@
     <script src="${options['site_version']}/dist/js/rainyday.js"></script>
     <script type='text/javascript'>
         function run() {
-            var image = document.getElementById('background_img');
-            var canvas = document.getElementById('canvas');
+            let image = document.getElementById('background_img');
+            let canvas = document.getElementById('canvas');
             image.onload = function() {
-                var engine = new RainyDay({
+                let engine = new RainyDay({
                     image:this,
                     parentElement:canvas
                 });
@@ -58,7 +58,6 @@
             width: 100%;
             height: 100%;
         }
-
         #background_img{
             width: 100%;
             height: 100%;
@@ -72,11 +71,12 @@
         }
     </style>
 </head>
-<body onload="run();">
+<body>
 <div id="background">
-    <div id="canvas"></div>
-    <#assign background_url="${options['site_background']}"?split(',')>
-    <img id="background_img" src="${background_url[0]}" alt="img">
+    <div id="canvas">
+        <#assign background_url="${options['site_background']}"?split(',')>
+        <img id="background_img" src="${background_url[0]}" alt="img" onload="run()">
+    </div>
 </div>
 <div id="body_content">
     <#include "/classic/inc/header.ftl"/>
