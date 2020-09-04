@@ -27,7 +27,7 @@
                         <div class="upload-btn">
                             <label>
                                 <span>点击选择一张图片</span>
-                                <input id="upload_btn" type="file" name="file" accept="image/*" title="点击添加图片">
+                                <input id="upload_btn" type="file" name="file" accept="image/*" title="点击添加图片" />
                             </label>
                         </div>
                     </div>

@@ -11,6 +11,7 @@
 define(function(require, exports, module) {
 	J = jQuery;
 	require('tagsinput');
+    require('plugins');
 
 	var PostView = function () {};
 	
@@ -47,9 +48,9 @@ define(function(require, exports, module) {
         
         bindUpload : function () {
             $('#upload_btn').change(function(){
-                $(this).upload(_MTONS.BASE_PATH + '/post/upload?crop=thumbnail_post_size', function(data){
+                $(this).upload( '/post/upload?crop=thumbnail_post_size', function(data){
                     if (data.status === 200) {
-                        var path = data.path;
+                        let path = data.path;
                         $("#thumbnail_image").css("background", "url(" + path + ") no-repeat scroll center 0 rgba(0, 0, 0, 0)");
                         $("#thumbnail").val(path);
                     }else{
