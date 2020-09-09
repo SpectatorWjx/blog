@@ -42,6 +42,15 @@
             jQuery('.fsb-slider').fsbslider({"animation_time":100,"animation_type":"crossfade","pattern":false});
         });
     </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?325248498dda9db1788966d22610d24d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
 <ul class="fsb-slider">
