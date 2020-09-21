@@ -10,6 +10,9 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+/**
+ * @author zhijiu_w
+ */
 @EntityScan(basePackages={"com.wang.common.entity.*"})
 @EnableJpaRepositories(basePackages = {"com.wang.blog.repository"})
 @Slf4j

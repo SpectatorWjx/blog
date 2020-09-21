@@ -10,6 +10,7 @@ import com.wang.common.entity.user.RolePermissionEntity;
 import com.wang.common.entity.user.UserRoleEntity;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -74,9 +75,9 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public void update(RoleEntity r, Set<String> permissions) {
-        Optional<RoleEntity> optional = roleRepository.findById(r.getId());
+        Optional<RoleEntity> optional = roleRepository.findOne(Example.of(r));
         RoleEntity po = optional.orElse(new RoleEntity());
-            po.setName(r.getName());
+        po.setName(r.getName());
         po.setDescription(r.getDescription());
         po.setStatus(r.getStatus());
 

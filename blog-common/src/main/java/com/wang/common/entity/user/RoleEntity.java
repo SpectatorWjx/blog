@@ -36,7 +36,7 @@ public class RoleEntity extends BaseEntity {
     @Column(length = 140)
     private String description;
 
-    private Integer status;
+    private Integer status = 0;
 
     @Transient
     private List<PermissionEntity> permissions;
