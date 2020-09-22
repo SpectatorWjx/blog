@@ -231,13 +231,14 @@ public class PostServiceImpl implements PostService {
                     // 保存扩展
                     PostAttributeEntity attributeOptional = postAttributeRepository.findByPostId(po.getId());
                     String originContent = "";
-                    if (Optional.ofNullable(attributeOptional).isPresent()){
-                        originContent = attributeOptional.getContent();
-                    }
                     PostAttributeEntity attr = new PostAttributeEntity();
                     attr.setContent(p.getContent());
                     attr.setEditor(p.getEditor());
-                    attr.setId(po.getId());
+                    attr.setPostId(po.getId());
+                    if(Optional.ofNullable(attributeOptional).isPresent()) {
+						originContent = attributeOptional.getContent();
+						attr.setId(attributeOptional.getId());
+					}
                     postAttributeRepository.save(attr);
 
                     tagService.batchUpdate(po.getTags(), po.getId());
