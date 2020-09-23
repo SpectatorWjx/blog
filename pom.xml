@@ -270,5 +270,12 @@
             <artifactId>ucloud-sdk-java-udisk</artifactId>
             <version>0.8.3.0-release</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20200518</version>
+        </dependency>
     </dependencies>
 </project>

@@ -1,6 +1,6 @@
 <#include "/admin/utils/login.ftl"/>
 <@layout>
-<div class="row">
+    <div class="row">
     <div class="col-md-4 col-md-offset-4 floating-box">
         <div class="panel panel-default">
             <#include "/admin/message.ftl">
@@ -8,7 +8,7 @@
                 <h3 class="panel-title">后台登陆</h3>
             </div>
             <div class="panel-body">
-                <form method="POST" action="login" accept-charset="UTF-8">
+                <form method="POST" action="login" id="login_Form" accept-charset="UTF-8">
                     <div class="form-group">
                         <label class="control-label" for="username">账号</label>
                         <input class="form-control" name="username" type="text" required>
@@ -17,10 +17,14 @@
                         <label class="control-label" for="password">密码</label>
                         <input class="form-control" name="password" type="password" required>
                     </div>
+                    <br>
+                    <div id="captcha">
+                        <p id="wait">正在加载验证码......</p>
+                    </div>
+                    <br>
+                    <p id="notice" class="hide">请先完成验证</p>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">
-                            登录
-                        </button>
+                        <button type="submit" id ="submit" class="btn btn-primary btn-block">登录</button>
                     </div>
                 </form>
             </div>
@@ -33,5 +37,37 @@
         <span class="footer-nav-item">Powered by <a href="https://github.com/SpectatorWjx" target="_blank">myBlog</a></span>
     </div>
 </div>
+<script src="https://static.geetest.com/static/tools/gt.js"></script>
+<script>
+    var handler = function (captchaObj) {
+        $("#submit").click(function (e) {
+            var result = captchaObj.getValidate();
+            if (!result) {
+                layer.msg("请点击验证");
+                e.preventDefault()
+            }
+        });
+        captchaObj.appendTo("#captcha");
+        captchaObj.onReady(function () {
+            $("#wait").hide();
+        });
+    };
+    $.ajax({
+        url: "captcha/register?t=" + (new Date()).getTime(),
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+            initGeetest({
+                gt: data.gt,
+                challenge: data.challenge,
+                new_captcha: data.new_captcha,
+                offline: !data.success,
+                product: "float",
+                width: "100%"
+            }, handler);
+        }
+    });
+</script>
+
 </@layout>
 

@@ -4975,3 +4975,16 @@ table.text-center th {
     white-space: normal !important;
   }
 }
+ #captcha {
+   width: 100%;
+   display: inline-block;
+ }
+
+#notice {
+  color: red;
+}
+#wait {
+  text-align: center;
+  color: #666;
+  margin: 0;
+}

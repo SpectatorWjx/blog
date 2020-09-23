@@ -1,10 +1,11 @@
 <#-- layout -->
 <#macro layout>
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.w3.org/1999/xhtml ">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>后台管理 - ${options['site_name']}</title>
 
     <!-- Favicons -->
@@ -39,11 +40,11 @@
     <script src='${base}/dist/vendors/jquery-validation/localization/messages_zh.min.js'></script>
     <script src="${base}/dist/vendors/layer/layer.js"></script>
     <!-- Favicons -->
-    <link href="<@resource src=options['site_favicon']/>" rel="apple-touch-icon-precomposed" />
-    <link href="<@resource src=options['site_favicon']/>" rel="shortcut icon" />
+    <link href="<@resource src=options['site_favicon']/>" rel="apple-touch-icon-precomposed"/>
+    <link href="<@resource src=options['site_favicon']/>" rel="shortcut icon"/>
 </head>
-<body >
-        <#nested/>
+<body>
+<#nested/>
 <#--    <!-- Main Footer &ndash;&gt;-->
 <#--    <footer class="main-footer">-->
 <#--        <!-- To the right &ndash;&gt;-->
