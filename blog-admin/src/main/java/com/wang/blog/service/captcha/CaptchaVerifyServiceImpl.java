@@ -1,5 +1,7 @@
 package com.wang.blog.service.captcha;
 
+import com.alibaba.fastjson.JSONObject;
+import com.google.gson.JsonObject;
 import com.wang.blog.config.captcha.GeetestConfig;
 import com.wang.blog.config.captcha.GeetestLib;
 import com.wang.blog.config.captcha.GeetestLibResult;
@@ -21,7 +23,7 @@ import java.util.Map;
 @Service
 public class CaptchaVerifyServiceImpl implements CaptchaVerifyService {
     @Override
-    public void firstRegister(HttpServletRequest request, HttpServletResponse response) {
+    public Object firstRegister(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("application/json;charset=UTF-8");
         GeetestLib gtLib = new GeetestLib(GeetestConfig.GEETEST_ID, GeetestConfig.GEETEST_KEY);
         String userId = "032d8b1879f867ea8d538e88015334de";
@@ -36,14 +38,7 @@ public class CaptchaVerifyServiceImpl implements CaptchaVerifyService {
         // 注意，此demo应用的session是单机模式，格外注意分布式环境下session的应用
         request.getSession().setAttribute(GeetestLib.GEETEST_SERVER_STATUS_SESSION_KEY, result.getStatus());
         request.getSession().setAttribute("userId", userId);
-        // 注意，不要更改返回的结构和值类型
-        PrintWriter out = null;
-        try {
-            out = response.getWriter();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        out.println(result.getData());
+        return JSONObject.parse(result.getData());
     }
 
     @Override

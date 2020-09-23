@@ -15,8 +15,9 @@ public interface CaptchaVerifyService {
      * 验证码初始化
      * @param request
      * @param response
+     * @return
      */
-    void firstRegister(HttpServletRequest request, HttpServletResponse response);
+    Object firstRegister(HttpServletRequest request, HttpServletResponse response);
 
     /**
      * 二次验证

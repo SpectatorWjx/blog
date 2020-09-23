@@ -3,7 +3,6 @@
     <div class="row">
     <div class="col-md-4 col-md-offset-4 floating-box">
         <div class="panel panel-default">
-            <#include "/admin/message.ftl">
             <div class="panel-heading">
                 <h3 class="panel-title">后台登陆</h3>
             </div>
@@ -58,7 +57,7 @@
         dataType: "json",
         success: function (data) {
             initGeetest({
-                gt: data.gt,
+                gt:data.gt,
                 challenge: data.challenge,
                 new_captcha: data.new_captcha,
                 offline: !data.success,
