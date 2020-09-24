@@ -26,6 +26,11 @@
                         </span>
                     </div>
                     <div class="form-group">
+                        <div id="captcha">
+                            <p id="wait">正在加载验证码......</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <button type="button" onclick="login();" class="btn btn-primary btn-block"> 登陆 </button>
                     </div>
                     <@controls name="register">
@@ -66,13 +71,19 @@
         </div>
     </div>
 </div>
+<script src="https://static.geetest.com/static/tools/gt.js"></script>
 <script type="text/javascript">
     $(function(){
         if(window.location.host != "delpast.com"){
             $('.wwwHidden').css('display','none');
         }
     });
-    function login() {
+    function login(captchaObj) {
+        var result = captchaObj.getValidate();
+        if (!result) {
+            layer.msg("请点击验证");
+            e.preventDefault()
+        }
         $.ajax({
             type: "POST",
             dataType: "json",
@@ -90,6 +101,34 @@
             }
         });
     }
+    var handler = function (captchaObj) {
+        // $("#submit").click(function (e) {
+        //     var result = captchaObj.getValidate();
+        //     if (!result) {
+        //         layer.msg("请点击验证");
+        //         e.preventDefault()
+        //     }
+        // });
+        captchaObj.appendTo("#captcha");
+        captchaObj.onReady(function () {
+            $("#wait").hide();
+        });
+    };
+    $.ajax({
+        url: "captcha/register?t=" + (new Date()).getTime(),
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+            initGeetest({
+                gt:data.gt,
+                challenge: data.challenge,
+                new_captcha: data.new_captcha,
+                offline: !data.success,
+                product: "float",
+                width: "100%"
+            }, handler);
+        }
+    });
 </script>
 </@layout>
 

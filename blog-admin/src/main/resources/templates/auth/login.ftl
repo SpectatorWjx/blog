@@ -16,11 +16,11 @@
                         <label class="control-label" for="password">密码</label>
                         <input class="form-control" name="password" type="password" required>
                     </div>
-                    <br>
-                    <div id="captcha">
-                        <p id="wait">正在加载验证码......</p>
+                    <div class="form-group">
+                        <div id="captcha">
+                            <p id="wait">正在加载验证码......</p>
+                        </div>
                     </div>
-                    <br>
                     <p id="notice" class="hide">请先完成验证</p>
                     <div class="form-group">
                         <button type="submit" id ="submit" class="btn btn-primary btn-block">登录</button>

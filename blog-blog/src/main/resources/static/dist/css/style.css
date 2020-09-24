@@ -2389,3 +2389,17 @@ div.mce-toolbar-grp {
     background:rgba(255,68,0,0.9);
     cursor:default;
 }
+#captcha {
+    width: 100%;
+    display: inline-block;
+}
+
+#notice {
+    color: red;
+}
+#wait {
+    text-align: center;
+    color: #666;
+    margin: 0;
+}
+

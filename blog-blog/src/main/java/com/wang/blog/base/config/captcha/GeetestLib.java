@@ -4,7 +4,7 @@
  * Copyright 2020 GEETEST, Inc. All rights reserved.
  * GEETEST PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package com.wang.blog.config.captcha;
+package com.wang.blog.base.config.captcha;
 
 import org.json.JSONObject;
 
