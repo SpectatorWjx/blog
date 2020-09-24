@@ -33,7 +33,7 @@
 				</div>
 				<div class="form-group">
 					<div class="text-center">
-					<button type="button" onclick="updatePassword();" class="btn btn-primary">提交</button>
+					<button type="submit" onclick="updatePassword();" class="btn btn-primary">提交</button>
 					</div>
 				</div><!-- /form-actions -->
 			</form>
@@ -43,9 +43,12 @@
 
 <script type="text/javascript">
     seajs.use('validate', function (validate) {
-        validate.updatePassword('#submitForm');
+        validate.updatePassword('#passwordForm');
     });
     function updatePassword() {
+		if(!$("#passwordForm").validate().form()){
+			return;
+		}
 		$.ajax({
 			type: "POST",
 			dataType: "json",

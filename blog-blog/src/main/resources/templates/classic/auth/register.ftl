@@ -27,7 +27,12 @@
                         <label class="control-label" for="username">确认密码</label>
                         <input class="form-control" id="password2" name="password2" type="password" placeholder="请再一次输入密码" maxlength="18">
                     </div>
-                    <button type="button" onclick="sendEmail();" class="btn btn-primary btn-block">
+                    <div class="form-group">
+                        <div id="captcha">
+                            <p id="wait">正在加载验证码......</p>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary btn-block">
                         提交
                     </button>
                 </form>
@@ -36,26 +41,60 @@
     </div>
 </div>
 
+<script src="https://static.geetest.com/static/tools/gt.js"></script>
 <script type="text/javascript">
-    seajs.use('validate', function (validate) {
-        validate.register('#submitForm');
+    $.ajax({
+        url: "captcha/register?t=" + (new Date()).getTime(),
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+            initGeetest({
+                gt:data.gt,
+                challenge: data.challenge,
+                new_captcha: data.new_captcha,
+                offline: !data.success,
+                product: "float",
+                width: "100%"
+            }, handler);
+        }
     });
-    function sendEmail() {
-        $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: "/register" ,
-            data: $('#registerForm').serialize(),
-            success: function (result) {
-                if (result.code === 200) {
-                    window.location.href ="/auth/register_active";
-                }else{
-                    layer.msg(result.message, {icon: 2});
-                }
-            },
-            error : function() {
-                layer.msg("系统错误", {icon: 2});
+    seajs.use('validate', function (validate) {
+        validate.register('#registerForm');
+    });
+    let handler = function (captchaObj) {
+        let flag = true;
+        $("#submit").click(function (e) {
+            if (!$("#registerForm").validate().form()) {
+                return;
             }
+            let result = captchaObj.getValidate();
+            if (!result && flag) {
+                layer.msg("请点击验证");
+                e.preventDefault()
+            } else {
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/register",
+                    data: $('#registerForm').serialize(),
+                    success: function (result) {
+                        if (result.code === 200) {
+                            window.location.href = "/auth/register_active";
+                        } else {
+                            layer.msg(result.message, {icon: 2});
+                            captchaObj.reset();
+                        }
+                    },
+                    error: function () {
+                        layer.msg("系统错误", {icon: 2});
+                        captchaObj.reset();
+                    }
+                });
+            }
+        });
+        captchaObj.appendTo("#captcha");
+        captchaObj.onReady(function () {
+            $("#wait").hide();
         });
     }
 </script>

@@ -32,7 +32,7 @@
                 </div>
 				<div class="form-group">
 					<div class="text-center">
-						<button type="button" onclick="updateEmail();" class="btn btn-primary">提交</button>
+						<button type="submit" onclick="updateEmail();" class="btn btn-primary">提交</button>
 					</div>
 				</div><!-- /form-actions -->
 			</form>
@@ -42,9 +42,12 @@
 
 <script type="text/javascript">
     seajs.use('validate', function (validate) {
-        validate.updateEmail('#submitForm', '#sendCode');
+        validate.updateEmail('#emailForm', '#sendCode');
     });
 	function updateEmail() {
+		if(!$("#emailForm").validate().form()){
+			return;
+		}
 		$.ajax({
 			type: "POST",
 			dataType: "json",

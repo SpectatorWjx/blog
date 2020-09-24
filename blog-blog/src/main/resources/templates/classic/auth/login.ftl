@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="button" onclick="login();" class="btn btn-primary btn-block"> 登陆 </button>
+                        <button type="submit" id="submit" class="btn btn-primary btn-block"> 登陆 </button>
                     </div>
                     <@controls name="register">
                         <fieldset class="form-group">
@@ -71,6 +71,7 @@
         </div>
     </div>
 </div>
+
 <script src="https://static.geetest.com/static/tools/gt.js"></script>
 <script type="text/javascript">
     $(function(){
@@ -78,42 +79,6 @@
             $('.wwwHidden').css('display','none');
         }
     });
-    function login(captchaObj) {
-        var result = captchaObj.getValidate();
-        if (!result) {
-            layer.msg("请点击验证");
-            e.preventDefault()
-        }
-        $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: "/login" ,
-            data: $('#loginForm').serialize(),
-            success: function (result) {
-                if (result.code === 200) {
-                    window.location.href = result.data;
-                }else{
-                    layer.msg(result.message, {icon: 2});
-                }
-            },
-            error : function() {
-                layer.msg("系统错误", {icon: 2});
-            }
-        });
-    }
-    var handler = function (captchaObj) {
-        // $("#submit").click(function (e) {
-        //     var result = captchaObj.getValidate();
-        //     if (!result) {
-        //         layer.msg("请点击验证");
-        //         e.preventDefault()
-        //     }
-        // });
-        captchaObj.appendTo("#captcha");
-        captchaObj.onReady(function () {
-            $("#wait").hide();
-        });
-    };
     $.ajax({
         url: "captcha/register?t=" + (new Date()).getTime(),
         type: "get",
@@ -129,6 +94,45 @@
             }, handler);
         }
     });
+    seajs.use('validate', function (validate) {
+        validate.login('#loginForm');
+    });
+    let handler = function (captchaObj) {
+        $("#submit").click(function (e) {
+            if(!$("#loginForm").validate().form()){
+                return;
+            }
+            let result = captchaObj.getValidate();
+            if (!result) {
+                layer.msg("请点击验证");
+                e.preventDefault()
+            }else{
+                // 符合规则进入后台 ajax处理
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/login" ,
+                    data: $('#loginForm').serialize(),
+                    success: function (result) {
+                        if (result.code === 200) {
+                            window.location.href = result.data;
+                        }else{
+                            layer.msg(result.message, {icon: 2});
+                            captchaObj.reset();
+                        }
+                    },
+                    error : function() {
+                        layer.msg("系统错误", {icon: 2});
+                        captchaObj.reset();
+                    }
+                });
+            }
+        });
+        captchaObj.appendTo("#captcha");
+        captchaObj.onReady(function () {
+            $("#wait").hide();
+        });
+    }
 </script>
 </@layout>
 

@@ -42,9 +42,12 @@
 
 <script type="text/javascript">
     seajs.use('validate', function (validate) {
-        validate.forgot('#submitForm', '#sendCode');
+        validate.forgot('#forgotForm', '#sendCode');
     });
     function forgot() {
+        if(!$("#forgotForm").validate().form()){
+            return;
+        }
         $.ajax({
             type: "POST",
             dataType: "json",

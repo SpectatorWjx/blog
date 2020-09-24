@@ -31,13 +31,32 @@ define(function(require, exports, module) {
 
     var _bind_validate = function (formId, configs) {
         var options = J.extend({}, _configs, configs);
-
         require.async(['validation', 'validation-additional'], function () {
             J(formId).validate(options);
         });
     };
 
-    var Validate = {
+    let Validate = {
+        login: function (formId) {
+            _bind_validate(formId, {
+                rules: {
+                    username: {
+                        required: true,
+                    },
+                    password: {
+                        required: true
+                    }
+                },
+                messages: {
+                    username: {
+                        required: '请输入用户名'
+                    },
+                    password: {
+                        required: '请输入密码'
+                    }
+                }
+            });
+        },
         register: function (formId) {
             _bind_validate(formId, {
                 rules: {
@@ -49,9 +68,6 @@ define(function(require, exports, module) {
                         required: true,
                         email: true
                     },
-                    // code: {
-                    //     required: true
-                    // },
                     password: {
                         required: true
                     },
@@ -69,9 +85,6 @@ define(function(require, exports, module) {
                         required: '请输入邮箱地址',
                         email: '邮箱格式不正确'
                     },
-                    // code: {
-                    //     required: '请输入收到的验证码'
-                    // },
                     password: {
                         required: '请输入密码'
                     },

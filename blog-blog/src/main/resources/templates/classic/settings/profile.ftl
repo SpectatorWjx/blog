@@ -27,7 +27,7 @@
 				</div>
 				<div class="form-group">
 					<div class="text-center">
-						<button type="button" onclick="updateProfile();"  class="btn btn-primary">提交</button>
+						<button type="submit" onclick="updateProfile();"  class="btn btn-primary">提交</button>
 					</div>
 				</div><!-- /form-actions -->
 			</form>
@@ -37,9 +37,12 @@
 
 <script type="text/javascript">
     seajs.use('validate', function (validate) {
-        validate.updateProfile('#submitForm');
+        validate.updateProfile('#profileForm');
     });
 	function updateProfile() {
+		if(!$("#profileForm").validate().form()){
+			return;
+		}
 		$.ajax({
 			type: "POST",
 			dataType: "json",

@@ -22,7 +22,7 @@ seajs.config({
         'tagsinput': 'https://cdn.bootcss.com/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js',
         'highlight': 'https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js',
         'highlight-css': 'https://cdn.bootcss.com/highlight.js/9.12.0/styles/monokai-sublime.min.css',
-        'validation': 'vendors/jquery-validation/jquery.validate.min.js',
+        'validation': 'https://cdn.bootcdn.net/ajax/libs/jquery-validate/1.19.0/jquery.validate.js',
         'validation-additional': 'vendors/jquery-validation/additional-methods.js',
         'validation-localization': 'vendors/jquery-validation/localization/messages_zh.min.js',
         'tinymce': 'https://cdn.bootcss.com/tinymce/4.7.6/tinymce.min.js',
