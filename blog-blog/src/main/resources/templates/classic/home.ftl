@@ -36,7 +36,7 @@
               </a>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown">
-              <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1332504948" class="dropdown-toggle"  rel="nofollow" >
+              <a href="tencent://message/?uin=1332504948&amp;Site=&amp;menu=yes" class="dropdown-toggle"  rel="nofollow" >
                 <h4>联系博主</h4>
               </a>
             </li>
