@@ -1,4 +1,4 @@
-<#macro posts_item row index escape=true>
+<#macro posts_item row index escape>
 <li class="content background-opacity leftIn delay-${index}">
     <#if row.thumbnail?? && row.thumbnail?length gt 0>
         <div class="content-box">
