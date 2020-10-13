@@ -37,6 +37,7 @@ public class OptionVO {
     private String editor;
     private String site_favicon;
     private String site_background;
+    private String site_post_background;
     private String site_banner;
     private String site_version;
     private String mail_smtp_host;

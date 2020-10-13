@@ -83,7 +83,7 @@
 <body>
 <div id="background">
     <div id="canvas">
-        <#assign background_url="${options['site_background']}"?split(',')>
+        <#assign background_url="${options['site_post_background']}"?split(',')>
         <img id="background_img" src="${background_url[0]}" alt="img" onload="run()">
     </div>
 </div>

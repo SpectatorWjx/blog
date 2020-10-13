@@ -54,9 +54,15 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="col-sm-2 control-label">BgdImage</label>
+        <label class="col-sm-2 control-label">BgImage</label>
         <div class="col-sm-6">
-            <input type="text" name="site_background" class="form-control" value="${options['site_background']}" placeholder="请输入背景图地址">
+            <input type="text" name="site_background" class="form-control" value="${options['site_background']}" placeholder="请输入主页背景图地址">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">PostBgImage</label>
+        <div class="col-sm-6">
+            <input type="text" name="site_post_background" class="form-control" value="${options['site_post_background']}" placeholder="请输入文章背景图地址">
         </div>
     </div>
     <div class="form-group">
