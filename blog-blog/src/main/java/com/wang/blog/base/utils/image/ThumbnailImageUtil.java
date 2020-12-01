@@ -11,7 +11,7 @@ import java.io.OutputStream;
  * 图片压缩工具类
  *
  * @author wjx
- *
+ * @date 2019/08/13
  **/
 public class ThumbnailImageUtil {
 

@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /***
- * @classname: MongoService
- * @description:
- * @author: wjx zhijiu
- * @date: 2019/10/28 8:51
+ * @classname MongoService
+ * @description
+ * @author wjx
+ * @date 2019/10/28
  */
 public interface MongoService {
     /**

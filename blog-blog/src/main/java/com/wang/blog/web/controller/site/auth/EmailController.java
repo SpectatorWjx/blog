@@ -20,7 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wjx on 2015/8/14.
+ * @author wjx
+ * @date 2019/08/13
  */
 @RestController
 @RequestMapping("/email")

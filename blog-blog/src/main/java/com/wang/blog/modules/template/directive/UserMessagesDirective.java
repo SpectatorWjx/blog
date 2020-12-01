@@ -14,8 +14,8 @@ import org.springframework.stereotype.Component;
 /**
  * 查询用户消息列表
  *
- * @author landy
- *
+ * @author wjx
+ * @date 2019/08/24
  */
 @Component
 public class UserMessagesDirective extends TemplateDirective {

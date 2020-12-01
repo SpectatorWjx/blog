@@ -4,7 +4,8 @@ import com.wang.blog.base.config.SiteOptions;
 import com.wang.blog.base.shiro.CustomizedToken;
 import com.wang.blog.base.utils.MD5;
 import com.wang.blog.vo.AccountProfile;
-import com.wang.blog.web.formatter.StringEscapeEditor;
+import com.wang.blog.base.formatter.StringEscapeEditor;
+import com.wang.common.common.base.BaseException;
 import com.wang.common.common.base.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -29,9 +30,8 @@ import java.util.Date;
 
 /**
  * Controller 基类
- *
  * @author wjx
- *
+ * @date 2019/08/13
  */
 @Slf4j
 public class BaseController {
@@ -106,27 +106,23 @@ public class BaseController {
     }
 
     protected Result<AccountProfile> executeLogin(String username, String password, boolean rememberMe, String type) {
-        Result<AccountProfile> ret = Result.exception(403,"登陆失败");
-
-        if (StringUtils.isAnyBlank(username, password)) {
-            return ret;
+       if (StringUtils.isAnyBlank(username, password)) {
+            return Result.exception(403,"登陆失败");
         }
 
         CustomizedToken token = new CustomizedToken(username, MD5.md5(password), rememberMe, type);
-
         try {
             SecurityUtils.getSubject().login(token);
-            ret = Result.success(getProfile());
         } catch (UnknownAccountException e) {
             log.error(e.getMessage());
-            ret = Result.exception(403,"用户不存在");
+            throw new BaseException(403,"用户不存在");
         } catch (LockedAccountException e) {
             log.error(e.getMessage());
-            ret = Result.exception(403,"用户被禁用");
+            throw new BaseException(403,"用户被禁用");
         } catch (AuthenticationException e) {
             log.error(e.getMessage());
-            ret = Result.exception(403,"用户认证失败");
+            throw new BaseException(403,"用户认证失败");
         }
-        return ret;
+        return Result.success(getProfile());
     }
 }

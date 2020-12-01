@@ -12,7 +12,8 @@ import static org.apache.commons.lang3.StringUtils.*;
 /**
  * Freemarker 模型工具类
  *
- * Created by wjx on 2017/11/14.
+ * @author  wjx
+ * @date 2017/11/14
  */
 public class TemplateModelUtils {
 

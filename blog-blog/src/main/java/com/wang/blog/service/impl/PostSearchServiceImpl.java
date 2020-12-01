@@ -32,9 +32,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author : wjx
- * @version : 1.0
- * @date : 2019/1/18
+ * @author wjx
+ * @date 2019/1/18
  */
 @Slf4j
 @Service

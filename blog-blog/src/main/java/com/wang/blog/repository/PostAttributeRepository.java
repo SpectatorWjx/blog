@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 /**
  * @author  wjx
+ * @date 2019/08/13
  */
 public interface PostAttributeRepository extends JpaRepository<PostAttributeEntity, String>, JpaSpecificationExecutor<PostAttributeEntity> {
     /**

@@ -17,7 +17,7 @@ import java.util.Map;
  * @classname CaptchaVerifyServiceImpl
  * @description
  * @author wjx
- * @date 2020/9/23 13:42
+ * @date 2020/9/23
  */
 @Service
 public class CaptchaVerifyServiceImpl implements CaptchaVerifyService {

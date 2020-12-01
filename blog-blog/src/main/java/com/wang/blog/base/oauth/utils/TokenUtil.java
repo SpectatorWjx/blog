@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 public class TokenUtil {
     private static final String STR_S = "abcdefghijklmnopqrstuvwxyz0123456789";

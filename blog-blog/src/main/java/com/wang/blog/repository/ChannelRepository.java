@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * @author wjx
- *
+ * @date 2019/08/13
  */
 public interface ChannelRepository extends BaseJpa<ChannelEntity> {
 	/**

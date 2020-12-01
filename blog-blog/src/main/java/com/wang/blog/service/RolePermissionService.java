@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author - wjx
- * @create - 2018/5/18
+ * @author wjx
+ * @date  2018/5/18
  */
 public interface RolePermissionService {
     /**

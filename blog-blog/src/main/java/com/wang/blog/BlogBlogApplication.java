@@ -11,6 +11,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+/**
+ * @author wjx
+ * @date 2019/08/13
+ */
 @EntityScan(basePackages={"com.wang.common.entity.*"})
 @EnableJpaRepositories(basePackages = {"com.wang.blog.repository"})
 @Slf4j

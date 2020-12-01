@@ -10,6 +10,7 @@ import org.springframework.data.repository.query.Param;
 
 /**
  * @author wjx
+ * @date 2019/08/13
  */
 public interface MessageRepository extends BaseJpa<MessageEntity> {
     Page<MessageEntity> findAllByUserId(Pageable pageable, String userId);

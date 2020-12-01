@@ -9,7 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 拦截器类钩子
  *
- * @author Beldon 2015/10/30
+ * @author wjx
+ * @date 2015/10/30
  */
 public interface InterceptorHook {
 

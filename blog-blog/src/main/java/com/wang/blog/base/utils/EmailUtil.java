@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author linyuhong
+ * @author wjx
  * @date 2019/9/2
  */
 public class EmailUtil {

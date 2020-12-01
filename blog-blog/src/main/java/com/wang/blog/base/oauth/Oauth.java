@@ -1,24 +1,19 @@
 package com.wang.blog.base.oauth;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.wang.blog.base.oauth.utils.HttpKit;
 import com.wang.blog.base.oauth.utils.OpenOauthBean;
-import com.wang.blog.base.oauth.utils.TokenUtil;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 @Data
 @Slf4j

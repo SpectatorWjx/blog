@@ -11,10 +11,10 @@ import java.io.IOException;
 import java.util.Date;
 
 /***
- * @classname: TestUpYunServiceImpl
- * @description:
- * @author: wjx
- * @date: 2020/4/13 16:27
+ * @classname TestUpYunServiceImpl
+ * @description
+ * @author wjx
+ * @date 2020/4/13
  */
 @Service
 public class UpYunServiceImpl implements UpYunService {

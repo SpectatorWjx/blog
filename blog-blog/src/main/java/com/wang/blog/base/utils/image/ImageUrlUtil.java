@@ -1,10 +1,10 @@
 package com.wang.blog.base.utils.image;
 
 /***
- * @classname: ImageUrlUtil
- * @description:
- * @author: wjx
- * @date: 2020/3/2 8:59
+ * @classname ImageUrlUtil
+ * @description
+ * @author wjx
+ * @date 2020/3/2
  */
 public class ImageUrlUtil {
 

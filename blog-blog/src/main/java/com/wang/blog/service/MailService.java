@@ -3,7 +3,7 @@ package com.wang.blog.service;
 import java.util.Map;
 
 /**
- * @author : wjx
+ * @author wjx
  */
 public interface MailService {
     /**

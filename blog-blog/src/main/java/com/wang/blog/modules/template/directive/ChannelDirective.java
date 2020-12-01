@@ -6,6 +6,10 @@ import com.wang.blog.modules.template.TemplateDirective;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author wjx
+ * @date 2019/08/27
+ */
 @Component
 public class ChannelDirective extends TemplateDirective {
     @Autowired

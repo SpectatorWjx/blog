@@ -6,7 +6,8 @@ import com.wang.common.entity.user.UserOauthEntity;
 import com.wang.common.service.AbstractService;
 
 /**
- * @author wjx on 2015/8/12.
+ * @author wjx
+ * @date 2015/8/12
  */
 public interface OpenOauthService extends AbstractService<UserOauthEntity> {
 

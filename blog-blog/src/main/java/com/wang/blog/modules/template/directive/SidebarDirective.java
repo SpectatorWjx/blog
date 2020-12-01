@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * method: [latest_posts, hottest_posts, latest_comments]
- * on 2019/3/12
+ * @date  2019/3/12
  * @author wjx
  */
 @Component

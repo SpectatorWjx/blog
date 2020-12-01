@@ -9,7 +9,7 @@ import org.springframework.beans.BeanUtils;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 public class BeanMapUtils {
     private static String[] USER_IGNORE = new String[]{"password", "extend", "roles"};

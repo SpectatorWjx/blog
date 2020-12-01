@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author wjx on 2015/8/14.
+ * @author wjx
+ * @date 2019/08/13
  */
 @Controller
 public class ForgotController extends BaseController {

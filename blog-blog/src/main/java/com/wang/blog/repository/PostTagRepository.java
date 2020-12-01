@@ -10,7 +10,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * @author : wjx
+ * @author wjx
+ * @date 2019/05/11
  */
 @Repository
 public interface PostTagRepository extends JpaRepository<PostTagEntity, String>, JpaSpecificationExecutor<PostTagEntity> {

@@ -24,8 +24,8 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 /**
- * @author : landy
- * @version : 1.0
+ * @author wjx
+ * @date 2019/08/13
  */
 @Controller
 @RequestMapping("/settings")

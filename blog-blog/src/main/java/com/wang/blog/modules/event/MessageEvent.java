@@ -3,7 +3,8 @@ package com.wang.blog.modules.event;
 import org.springframework.context.ApplicationEvent;
 
 /**
- * @author wjx on 2015/8/31.
+ * @author wjx
+ * @date 2015/8/31
  */
 public class MessageEvent extends ApplicationEvent {
 	private static final long serialVersionUID = -4261382494171476390L;

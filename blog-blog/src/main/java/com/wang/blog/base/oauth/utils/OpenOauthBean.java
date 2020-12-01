@@ -5,7 +5,7 @@ import lombok.Data;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 @Data
 public class OpenOauthBean {

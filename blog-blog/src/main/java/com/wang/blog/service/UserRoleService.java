@@ -5,7 +5,8 @@ import com.wang.common.entity.user.RoleEntity;
 import java.util.List;
 
 /**
- * @author - wjx on 2018/2/11
+ * @author  wjx
+ * @date 2018/2/11
  */
 public interface UserRoleService {
     /**

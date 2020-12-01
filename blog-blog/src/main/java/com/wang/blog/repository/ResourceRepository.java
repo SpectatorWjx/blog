@@ -10,9 +10,8 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Resource dao
- *
- * @author saxing 2019/4/5 7:43
+ * @author wjx
+ * @date 2019/08/13
  */
 public interface ResourceRepository extends BaseJpa<ResourceEntity> {
 

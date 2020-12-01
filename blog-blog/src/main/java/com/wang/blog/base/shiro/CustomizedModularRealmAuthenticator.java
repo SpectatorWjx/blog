@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * @author Alan_Xiang 
+ * @author wjx
+ * @date 2019/08/13
  * 自定义Authenticator
  * 注意，当需要分别定义处理验证的Realm时，对应Realm的全类名应该包含字符串“User”，或者“Othrt”。
  * 并且，他们不能相互包含

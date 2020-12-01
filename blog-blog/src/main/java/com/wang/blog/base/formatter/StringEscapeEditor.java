@@ -5,7 +5,7 @@
 |   Copyright (c) 2014, 2015 mtons. All Rights Reserved
 |   http://www.mtons.com
 +---------------------------------------------------------------------------
-*/package com.wang.blog.web.formatter;
+*/package com.wang.blog.base.formatter;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,12 +13,13 @@ import java.beans.PropertyEditorSupport;
 import java.util.regex.Pattern;
 
 /**
- * Created by wjx on 2017/9/2.
+ * @author wjx
+ * @date 2019/9/2.
  */
 @Slf4j
 public class StringEscapeEditor extends PropertyEditorSupport {
-    private boolean escapeHTML;// 编码HTML
-    private boolean escapeJavaScript;// 编码JavaScript
+    private boolean escapeHTML;
+    private boolean escapeJavaScript;
 
     public StringEscapeEditor() {
         super();
@@ -46,13 +47,6 @@ public class StringEscapeEditor extends PropertyEditorSupport {
             // Avoid anything between script tags
             Pattern scriptPattern = Pattern.compile("<script>(.*?)</script>", Pattern.CASE_INSENSITIVE);
             value = scriptPattern.matcher(value).replaceAll("");
-
-            // Avoid anything in a src='...' type of expression
-//            scriptPattern = Pattern.compile("src[\r\n]*=[\r\n]*\\\'(.*?)\\\'", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE | Pattern.DOTALL);
-//            value = scriptPattern.matcher(value).replaceAll("");
-//
-//            scriptPattern = Pattern.compile("src[\r\n]*=[\r\n]*\\\"(.*?)\\\"", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE | Pattern.DOTALL);
-//            value = scriptPattern.matcher(value).replaceAll("");
 
             // Remove any lonesome </script> tag
             scriptPattern = Pattern.compile("</script>", Pattern.CASE_INSENSITIVE);

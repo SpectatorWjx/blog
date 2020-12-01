@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * 登陆
  * @author wjx
+ * @date 2019/08/13
  */
 @Controller
 public class LoginController extends BaseController {
@@ -39,12 +40,12 @@ public class LoginController extends BaseController {
      * 提交登陆
      * @param username
      * @param password
-     * @param model
+     * @param rememberMe
      * @return
      */
 	@PostMapping(value = "/login")
     @ResponseBody
-	public Result login(String username, String password, @RequestParam(value = "rememberMe",defaultValue = "0") Boolean rememberMe, ModelMap model) {
+	public Result login(String username, String password, @RequestParam(value = "rememberMe",defaultValue = "0") Boolean rememberMe) {
         Result<AccountProfile> result = executeLogin(username, password, rememberMe, LoginType.USER.toString());
         if (result.getCode().equals(ResultEnum.SUCCESS.getCode())) {
             return Result.success(String.format(Views.USER_HOME, result.getData().getId()));

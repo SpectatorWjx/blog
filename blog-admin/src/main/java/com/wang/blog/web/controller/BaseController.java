@@ -3,7 +3,7 @@ package com.wang.blog.web.controller;
 import com.wang.common.common.base.Result;
 import com.wang.blog.base.utils.MD5;
 import com.wang.blog.vo.AccountProfile;
-import com.wang.blog.web.formatter.StringEscapeEditor;
+import com.wang.blog.base.formatter.StringEscapeEditor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;

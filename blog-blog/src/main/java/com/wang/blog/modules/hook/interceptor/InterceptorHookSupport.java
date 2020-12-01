@@ -7,7 +7,8 @@ import javax.annotation.PreDestroy;
 /**
  * 拦截类钩子支持类
  *
- * @author Beldon 2015/10/30
+ * @author wjx
+ * @date 2015/10/30
  */
 public abstract class InterceptorHookSupport implements InterceptorHook {
     @Autowired

@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * @author wjx
+ * @date 2019/08/13
  */
 public interface CommentRepository extends BaseJpa<CommentEntity> {
 	Page<CommentEntity> findAllByPostId(Pageable pageable, String postId);

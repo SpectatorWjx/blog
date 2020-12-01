@@ -10,6 +10,7 @@ import java.util.Collection;
 
 /**
  * @author wjx
+ * @date 2019/08/13
  */
 public interface UserRepository extends BaseJpa<UserEntity> {
     UserEntity findByUsername(String username);

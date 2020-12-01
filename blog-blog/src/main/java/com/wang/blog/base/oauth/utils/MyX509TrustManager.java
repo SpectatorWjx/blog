@@ -5,7 +5,7 @@ import java.security.cert.X509Certificate;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 class MyX509TrustManager implements javax.net.ssl.X509TrustManager {
 

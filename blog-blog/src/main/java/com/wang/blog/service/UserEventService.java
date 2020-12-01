@@ -6,7 +6,8 @@ import org.springframework.cache.annotation.CacheEvict;
 import java.util.Set;
 
 /**
- * @author wjx on 2015/8/6.
+ * @author wjx
+ * @date 2015/8/6
  */
 public interface UserEventService {
     /**

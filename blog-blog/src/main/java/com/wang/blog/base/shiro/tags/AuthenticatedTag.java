@@ -13,7 +13,7 @@ import java.util.Optional;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 public class AuthenticatedTag extends SecureTag {
     private static final Logger log = Logger.getLogger("AuthenticatedTag");

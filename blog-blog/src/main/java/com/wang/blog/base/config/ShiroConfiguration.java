@@ -18,7 +18,7 @@ import java.util.*;
 /**
  * shiro权限管理的配置
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 @Configuration
 @ConditionalOnProperty(name = "shiro.web.enabled", matchIfMissing = true)

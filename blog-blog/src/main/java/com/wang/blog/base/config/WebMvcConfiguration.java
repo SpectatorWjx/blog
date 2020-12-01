@@ -1,7 +1,7 @@
 package com.wang.blog.base.config;
 
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.wang.blog.web.interceptor.BaseInterceptor;
+import com.wang.blog.modules.hook.interceptor.BaseInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 @Configuration
 public class WebMvcConfiguration implements WebMvcConfigurer {
@@ -23,8 +23,6 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     private BaseInterceptor baseInterceptor;
     @Autowired
     private FastJsonHttpMessageConverter fastJsonHttpMessageConverter;
-    @Autowired
-    private SiteOptions siteOptions;
 
     /**
      * Add intercepter

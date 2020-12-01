@@ -13,10 +13,10 @@ import java.util.List;
 import java.util.Map;
 
 /***
- * @classname: LinkController
- * @description:
- * @author: wjx
- * @date: 2020/3/5 16:40
+ * @classname LinkController
+ * @description
+ * @author wjx
+ * @date 2020/3/5
  */
 @Controller
 public class LinkController   extends BaseController {

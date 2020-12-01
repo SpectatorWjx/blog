@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 /**
  * 收藏记录
  * @author wjx
+ * @date 2019/08/13
  */
 public interface FavoriteService {
     /**

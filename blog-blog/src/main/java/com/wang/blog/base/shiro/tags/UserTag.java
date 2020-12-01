@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 public class UserTag extends SecureTag {
     static final Logger log = Logger.getLogger("UserTag");

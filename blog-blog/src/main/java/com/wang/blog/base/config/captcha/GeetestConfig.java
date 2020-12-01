@@ -1,7 +1,8 @@
 package com.wang.blog.base.config.captcha;
 
 /**
- * 配置文件，可合理选择properties等方式自行设计
+ * @author wjx
+ * @date 2019/12/10
  */
 public class GeetestConfig {
 

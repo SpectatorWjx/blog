@@ -26,10 +26,10 @@ import java.util.List;
 import java.util.Optional;
 
 /***
- * @classname: ImageMongoManageUtils
- * @description:
- * @author: wjx zhijiu
- * @date: 2019/10/31 8:45
+ * @classname ImageMongoManageUtils
+ * @description
+ * @author wjx
+ * @date 2019/10/31
  */
 @Data
 public class MongoManageUtils {

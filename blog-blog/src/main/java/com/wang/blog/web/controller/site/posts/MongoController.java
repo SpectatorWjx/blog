@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /***
- * @classname: MongoController
- * @description:
- * @author: wjx zhijiu
- * @date: 2019/10/28 8:48
+ * @classname MongoController
+ * @description
+ * @author wjx
+ * @date 2019/10/28
  */
 @RequestMapping("image")
 @Controller

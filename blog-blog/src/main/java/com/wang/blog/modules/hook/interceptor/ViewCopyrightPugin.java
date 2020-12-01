@@ -1,4 +1,4 @@
-package com.wang.blog.modules.hook.interceptor.impl;
+package com.wang.blog.modules.hook.interceptor;
 
 import com.wang.blog.vo.PostVO;
 import com.wang.blog.modules.hook.interceptor.InterceptorHookSupport;
@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author Beldon 2015/10/31
+ * @author wjx
+ * @date 2015/10/31
  */
 @Component
 public class ViewCopyrightPugin extends InterceptorHookSupport {

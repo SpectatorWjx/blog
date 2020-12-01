@@ -24,7 +24,7 @@ import java.util.Map;
 
 /**
  * @author wjx
- *
+ * @date 2019/08/13
  */
 @Controller
 @ConditionalOnProperty(name = "site.controls.register", havingValue = "true", matchIfMissing = true)

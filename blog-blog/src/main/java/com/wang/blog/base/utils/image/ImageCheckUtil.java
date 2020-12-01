@@ -20,7 +20,7 @@ import java.util.*;
  * @classname Test
  * @description
  * @author wjx
- * @date 2020/8/19 11:22
+ * @date 2020/8/19
  */
 @Slf4j
 public class ImageCheckUtil extends Signature{

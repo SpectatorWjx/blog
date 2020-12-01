@@ -16,7 +16,7 @@ import java.util.Set;
 
 /**
  * @author wjx
- *
+ * @date 2019/08/13
  */
 @CacheConfig(cacheNames = Consts.CACHE_USER)
 public interface UserService {

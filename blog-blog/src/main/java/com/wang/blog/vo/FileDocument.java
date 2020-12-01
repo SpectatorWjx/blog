@@ -6,21 +6,25 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
+/**
+ * @author wjx
+ * @date 2019/08/13
+ */
 @Document
 @Data
 public class FileDocument {
 
-    @Id  // 主键
+    @Id
     private String id;
-    private String name;        // 文件名称
-    private Long size;          // 文件大小
-    private Date uploadDate;    // 上传时间
-    private String md5;         // 文件MD5值
-    private byte[] content;     // 文件内容
-    private String contentType; // 文件类型
-    private String suffix;      // 文件后缀名
-    private String description; // 文件描述
-    private String gridfsId;    // 大文件管理GridFS的ID
+    private String name;
+    private Long size;
+    private Date uploadDate;
+    private String md5;
+    private byte[] content;
+    private String contentType;
+    private String suffix;
+    private String description;
+    private String gridfsId;
 
     public FileDocument() {}
 

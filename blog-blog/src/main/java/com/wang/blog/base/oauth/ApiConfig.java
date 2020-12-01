@@ -6,11 +6,11 @@ import java.lang.reflect.Method;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 @Data
-public class APIConfig {
-    private static APIConfig config = new APIConfig();
+public class ApiConfig {
+    private static ApiConfig config = new ApiConfig();
 
     private String openid_qq;
 
@@ -48,13 +48,13 @@ public class APIConfig {
 
     private String dp_secret;
 
-    private APIConfig() {
+    private ApiConfig() {
 
     }
 
-    public static APIConfig getInstance() {
+    public static ApiConfig getInstance() {
         if (config == null) {
-            config = new APIConfig();
+            config = new ApiConfig();
         }
         return config;
     }
@@ -64,7 +64,7 @@ public class APIConfig {
         String getter = "get" + firstLetter + attrName.substring(1);
         Object value = "";
         try {
-            Method method = APIConfig.class.getMethod(getter, new Class[0]);
+            Method method = ApiConfig.class.getMethod(getter, new Class[0]);
             value = method.invoke(config, new Object[0]);
         } catch (Exception e) {
             e.printStackTrace();

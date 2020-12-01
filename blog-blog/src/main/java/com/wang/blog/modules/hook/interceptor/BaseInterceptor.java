@@ -1,4 +1,4 @@
-package com.wang.blog.web.interceptor;
+package com.wang.blog.modules.hook.interceptor;
 
 import com.wang.blog.modules.hook.interceptor.InterceptorHookManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 
  * 基础拦截器 - 向 request 中添加一些基础变量
- * 
  * @author wjx
- * 
+ * @date 2019/08/13
  */
 @Component
 public class BaseInterceptor extends HandlerInterceptorAdapter {

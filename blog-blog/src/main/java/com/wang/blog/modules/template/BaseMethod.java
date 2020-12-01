@@ -8,7 +8,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by wjx on 2017/11/14.
+ * @author wjx
+ * @date 2017/11/14.
  */
 public abstract class BaseMethod implements TemplateMethodModelEx {
 

@@ -6,7 +6,7 @@ import lombok.Data;
  * @classname UserParam
  * @description
  * @author wjx
- * @date 2020/6/15 17:05
+ * @date 2020/6/15
  */
 @Data
 public class UserParam {

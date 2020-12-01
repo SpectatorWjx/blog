@@ -20,7 +20,7 @@ import java.util.Optional;
 /**
  * Channel 主页
  * @author wjx
- *
+ * @date 2019/08/13
  */
 @Controller
 public class ChannelController extends BaseController {

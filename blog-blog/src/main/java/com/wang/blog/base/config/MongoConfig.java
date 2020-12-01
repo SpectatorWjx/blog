@@ -18,6 +18,7 @@ import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 
 /**
  * @author wjx
+ * @date 2020/05/24
  */
 @Configuration
 public class MongoConfig {

@@ -28,7 +28,7 @@ import java.util.Map;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 public class OauthAliPay extends Oauth {
     private static final String AUTH_URL = "https://openauth.alipay.com/oauth2/publicAppAuthorize.htm";

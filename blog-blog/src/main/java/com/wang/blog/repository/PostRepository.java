@@ -14,6 +14,7 @@ import java.util.Map;
 
 /**
  * @author wjx
+ * @date 2019/08/13
  */
 public interface PostRepository extends BaseJpa<PostEntity> {
 
@@ -28,7 +29,8 @@ public interface PostRepository extends BaseJpa<PostEntity> {
             " c.name as channelName, c.id as channelId, " +
             " p.id as id, p.createTime as createTime, p.title as title, p.summary as summary, p.thumbnail as thumbnail," +
             " p.authorId as authorId, p.favors as favors, p.comments as comments, p.views as views, p.featured as featured, p.weight as weight," +
-            " u.id as userId, u.name as userName, u.avatar as avatar) " +
+            " u.id as userId, u.name as userName, u.avatar as avatar" +
+            ") " +
             " from PostEntity p " +
             " inner join ChannelEntity c on c.id = p.channelId and c.status = 0 " +
             " inner join UserEntity u on u.id = p.authorId and u.status = 0 " +

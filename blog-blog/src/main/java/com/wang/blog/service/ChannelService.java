@@ -8,7 +8,7 @@ import java.util.List;
  * 栏目管理
  * 
  * @author wjx
- *
+ * @date 2019/08/13
  */
 public interface ChannelService {
 	/**

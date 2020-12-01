@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * 文章搜索
  * @author wjx
- *
+ * @date 2019/08/13
  */
 @Controller
 public class SearchController extends BaseController {

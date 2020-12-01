@@ -12,10 +12,10 @@ import java.util.Enumeration;
 import java.util.Map;
 
 /***
- * @classname: RestTemplateUtils
- * @description:
- * @author: wjx zhijiu
- * @date: 2019/10/29 15:14
+ * @classname RestTemplateUtils
+ * @description
+ * @author wjx
+ * @date 2019/10/29
  */
 public class RestTemplateUtils {
 

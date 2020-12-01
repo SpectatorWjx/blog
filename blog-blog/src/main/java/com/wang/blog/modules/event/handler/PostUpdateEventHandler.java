@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 @Component
 public class PostUpdateEventHandler implements ApplicationListener<PostUpdateEvent> {

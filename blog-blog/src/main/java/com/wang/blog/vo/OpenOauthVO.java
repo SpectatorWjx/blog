@@ -5,6 +5,7 @@ import lombok.Data;
 /**
  * 第三方开发授权登陆
  * @author wjx
+ * @date 2019/08/13
  */
 @Data
 public class OpenOauthVO {

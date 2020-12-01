@@ -16,7 +16,7 @@ import java.util.Set;
 /**
  * 文章管理
  * @author wjx
- *
+ * @date 2019/08/13
  */
 @CacheConfig(cacheNames = Consts.CACHE_POST)
 public interface PostService {

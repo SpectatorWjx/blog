@@ -3,6 +3,10 @@ package com.wang.blog.base.utils.image;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author wjx
+ * @date 2019/08/13
+ */
 public class FileContentTypeUtils {
 
     /**

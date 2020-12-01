@@ -13,7 +13,8 @@ import java.util.Optional;
 
 /**
  * 第三方登陆授权管理
- * @author wjx on 2015/8/12.
+ * @author wjx
+ * @date 2015/8/12
  */
 @Service
 @Transactional(rollbackFor = RuntimeException.class)

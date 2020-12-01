@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * @classname CaptchaVerifyController
  * @description
  * @author wjx
- * @date 2020/9/23 13:21
+ * @date 2020/9/23
  */
 @Controller
 @RequestMapping("captcha")

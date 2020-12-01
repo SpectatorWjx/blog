@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author wjx
+ * @date 2019/08/13
  */
 @Controller
 @RequestMapping(value = "error")

@@ -5,7 +5,7 @@
 |   Copyright (c) 2014, 2015 mtons. All Rights Reserved
 |   http://www.mtons.com
 +---------------------------------------------------------------------------
-*/package com.wang.blog.web.formatter;
+*/package com.wang.blog.base.formatter;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author wjx
+ * @date 2019/08/13
  */
 @Controller
 public class LogoutController extends BaseController {

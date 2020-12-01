@@ -17,7 +17,7 @@ import org.springframework.util.Assert;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 @Component
 public class MessageEventHandler implements ApplicationListener<MessageEvent> {

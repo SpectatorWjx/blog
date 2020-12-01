@@ -1,4 +1,4 @@
-package com.wang.blog.modules.hook.interceptor.impl;
+package com.wang.blog.modules.hook.interceptor;
 
 import com.wang.blog.vo.AccountProfile;
 import com.wang.blog.vo.PostVO;
@@ -17,7 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author Beldon
+ * @author wjx
+ * @date 2018/01/15
  */
 @Component
 public class HidenContentPugin extends InterceptorHookSupport {

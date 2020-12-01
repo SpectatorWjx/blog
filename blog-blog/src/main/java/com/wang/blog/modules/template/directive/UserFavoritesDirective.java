@@ -14,8 +14,8 @@ import org.springframework.stereotype.Component;
 /**
  * 根据作者取收藏列表
  *
- * @author landy
- *
+ * @author wjx
+ * @date 2020/01/11
  */
 @Component
 public class UserFavoritesDirective extends TemplateDirective {

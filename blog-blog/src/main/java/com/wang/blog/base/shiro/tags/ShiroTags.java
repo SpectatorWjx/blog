@@ -4,7 +4,7 @@ import freemarker.template.SimpleHash;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 public class ShiroTags extends SimpleHash {
 

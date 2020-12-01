@@ -1,4 +1,4 @@
-package com.wang.blog.web.filter;
+package com.wang.blog.base.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StopWatch;
@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * @author wjx on 2015/7/10.
+ * @author wjx
+ * @date 2019/7/10.
  */
 @Slf4j
 public class RequestCostFilter implements Filter {

@@ -2,8 +2,8 @@ package com.wang.blog.web.controller.site;
 
 /**
  * 主题页面配置
- *
  * @author wjx
+ * @date 2019/08/13
  */
 public interface Views {
     /**

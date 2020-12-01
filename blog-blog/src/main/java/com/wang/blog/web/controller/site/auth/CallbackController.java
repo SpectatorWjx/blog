@@ -39,6 +39,7 @@ import java.io.UnsupportedEncodingException;
  * 第三方登陆回调
  *
  * @author wjx
+ * @date 2019/08/13
  */
 @Slf4j
 @Controller
@@ -69,9 +70,9 @@ public class CallbackController extends BaseController {
         String serverName = "https://" + request.getServerName();
         response.setContentType("text/html;charset=utf-8");
         try {
-            APIConfig.getInstance().setOpenid_sina(siteOptions.getValue(Consts.WEIBO_CLIENT_ID));
-            APIConfig.getInstance().setOpenkey_sina(siteOptions.getValue(Consts.WEIBO_CLIENT_SERCRET));
-            APIConfig.getInstance().setRedirect_sina(serverName+siteOptions.getValue(Consts.WEIBO_CALLBACK));
+            ApiConfig.getInstance().setOpenid_sina(siteOptions.getValue(Consts.WEIBO_CLIENT_ID));
+            ApiConfig.getInstance().setOpenkey_sina(siteOptions.getValue(Consts.WEIBO_CLIENT_SERCRET));
+            ApiConfig.getInstance().setRedirect_sina(serverName+siteOptions.getValue(Consts.WEIBO_CALLBACK));
 
             String state = TokenUtil.randomState();
             session.setAttribute(WEI_BO_SESSION_STATE, state);
@@ -112,9 +113,9 @@ public class CallbackController extends BaseController {
         String serverName = "https://" + request.getServerName();
         response.setContentType("text/html;charset=utf-8");
         try {
-            APIConfig.getInstance().setOpenid_qq(siteOptions.getValue(Consts.QQ_APP_ID));
-            APIConfig.getInstance().setOpenkey_qq(siteOptions.getValue(Consts.QQ_APP_KEY));
-            APIConfig.getInstance().setRedirect_qq(serverName + siteOptions.getValue(Consts.QQ_CALLBACK));
+            ApiConfig.getInstance().setOpenid_qq(siteOptions.getValue(Consts.QQ_APP_ID));
+            ApiConfig.getInstance().setOpenkey_qq(siteOptions.getValue(Consts.QQ_APP_KEY));
+            ApiConfig.getInstance().setRedirect_qq(serverName + siteOptions.getValue(Consts.QQ_CALLBACK));
 
             String state = TokenUtil.randomState();
             session.setAttribute(QQ_SESSION_STATE, state);
@@ -152,9 +153,9 @@ public class CallbackController extends BaseController {
     public void callGithub(HttpServletRequest request, HttpSession session, HttpServletResponse response) {
         String serverName = "https://" + request.getServerName();
         //设置github的相关
-        APIConfig.getInstance().setOpenid_github(siteOptions.getValue(Consts.GITHUB_CLIENT_ID));
-        APIConfig.getInstance().setOpenkey_github(siteOptions.getValue(Consts.GITHUB_SECRET_KEY));
-        APIConfig.getInstance().setRedirect_github(serverName + siteOptions.getValue(Consts.GITHUB_CALLBACK));
+        ApiConfig.getInstance().setOpenid_github(siteOptions.getValue(Consts.GITHUB_CLIENT_ID));
+        ApiConfig.getInstance().setOpenkey_github(siteOptions.getValue(Consts.GITHUB_SECRET_KEY));
+        ApiConfig.getInstance().setRedirect_github(serverName + siteOptions.getValue(Consts.GITHUB_CALLBACK));
         try {
             response.setContentType("text/html;charset=utf-8");
             String state = TokenUtil.randomState();
@@ -195,9 +196,9 @@ public class CallbackController extends BaseController {
     public void callGitee(HttpServletRequest request, HttpSession session, HttpServletResponse response) {
         String serverName = "https://" + request.getServerName();
         //设置github的相关
-        APIConfig.getInstance().setOpenid_gitee(siteOptions.getValue(Consts.GITEE_CLIENT_ID));
-        APIConfig.getInstance().setOpenkey_gitee(siteOptions.getValue(Consts.GITEE_SECRET_KEY));
-        APIConfig.getInstance().setRedirect_gitee(serverName + siteOptions.getValue(Consts.GITEE_CALLBACK));
+        ApiConfig.getInstance().setOpenid_gitee(siteOptions.getValue(Consts.GITEE_CLIENT_ID));
+        ApiConfig.getInstance().setOpenkey_gitee(siteOptions.getValue(Consts.GITEE_SECRET_KEY));
+        ApiConfig.getInstance().setRedirect_gitee(serverName + siteOptions.getValue(Consts.GITEE_CALLBACK));
 
         try {
             response.setContentType("text/html;charset=utf-8");
@@ -240,9 +241,9 @@ public class CallbackController extends BaseController {
     public void callAliPay(HttpServletRequest request, HttpSession session, HttpServletResponse response) {
         String serverName = "https://" + request.getServerName();
         //设置github的相关
-        APIConfig.getInstance().setOpenid_alipay(siteOptions.getValue(Consts.ALIPAY_CLIENT_ID));
-        APIConfig.getInstance().setOpenkey_alipay(siteOptions.getValue(Consts.ALIPAY_SECRET_KEY));
-        APIConfig.getInstance().setRedirect_alipay(serverName + siteOptions.getValue(Consts.ALIPAY_CALLBACK));
+        ApiConfig.getInstance().setOpenid_alipay(siteOptions.getValue(Consts.ALIPAY_CLIENT_ID));
+        ApiConfig.getInstance().setOpenkey_alipay(siteOptions.getValue(Consts.ALIPAY_SECRET_KEY));
+        ApiConfig.getInstance().setRedirect_alipay(serverName + siteOptions.getValue(Consts.ALIPAY_CALLBACK));
 
         try {
             response.setContentType("text/html;charset=utf-8");

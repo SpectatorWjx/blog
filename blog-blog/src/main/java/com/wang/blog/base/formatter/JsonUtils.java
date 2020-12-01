@@ -1,4 +1,4 @@
-package com.wang.blog.web.formatter;
+package com.wang.blog.base.formatter;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -18,7 +18,7 @@ import java.util.Date;
 
 /**
  * @author wjx
- * 
+ * @date 2019/08/10
  */
 @Component
 public class JsonUtils {

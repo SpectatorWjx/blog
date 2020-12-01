@@ -2,8 +2,8 @@ package com.wang.blog.base.shiro;
 
 /**
  * @author wjx
+ * @date 2019/08/13
  */
-
 public enum LoginType {
     /**
      * user

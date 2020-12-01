@@ -1,4 +1,4 @@
-package com.wang.blog.web.filter;
+package com.wang.blog.base.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StopWatch;

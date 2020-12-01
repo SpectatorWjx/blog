@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * 加载配置信息到系统
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 @Slf4j
 @Order(2)

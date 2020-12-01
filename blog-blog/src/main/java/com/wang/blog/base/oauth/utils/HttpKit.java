@@ -20,7 +20,7 @@ import java.util.Map.Entry;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 public class HttpKit {
     private static final String DEFAULT_CHARSET = "UTF-8";

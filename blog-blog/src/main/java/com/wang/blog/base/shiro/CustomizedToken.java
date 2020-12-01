@@ -4,6 +4,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 
 /**
  * @author wjx
+ * @date 2019/08/13
  */
 public class CustomizedToken extends UsernamePasswordToken {
 

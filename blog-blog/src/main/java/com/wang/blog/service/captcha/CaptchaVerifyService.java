@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
  * @classname CaptchaVerifyService
  * @description
  * @author wjx
- * @date 2020/9/23 13:41
+ * @date 2020/9/23
  */
 public interface CaptchaVerifyService {
 

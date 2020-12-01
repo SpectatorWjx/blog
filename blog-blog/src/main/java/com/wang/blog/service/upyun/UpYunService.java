@@ -3,10 +3,10 @@ package com.wang.blog.service.upyun;
 import org.springframework.web.multipart.MultipartFile;
 
 /***
- * @classname: TestUpYunService
- * @description:
- * @author: wjx
- * @date: 2020/4/13 16:26
+ * @classname TestUpYunService
+ * @description
+ * @author wjx
+ * @date 2020/4/13
  */
 public interface UpYunService {
     /**

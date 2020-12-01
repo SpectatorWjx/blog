@@ -6,6 +6,10 @@ import com.wang.common.repository.BaseJpa;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * @author wjx
+ * @date 2019/08/13
+ */
 public interface UserRoleRepository extends BaseJpa<UserRoleEntity> {
     List<UserRoleEntity> findAllByUserId(String userId);
 

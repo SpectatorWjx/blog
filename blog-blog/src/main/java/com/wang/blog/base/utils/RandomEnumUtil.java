@@ -2,6 +2,10 @@ package com.wang.blog.base.utils;
 
 import java.util.Random;
 
+/**
+ * @author wjx
+ * @date 2019/08/13
+ */
 public class RandomEnumUtil {
     private static int random=(int)(Math.random()*10);// 生成种子
     private static Random rand = new Random(random);

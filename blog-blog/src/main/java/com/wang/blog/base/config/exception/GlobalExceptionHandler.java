@@ -1,6 +1,5 @@
 package com.wang.blog.base.config.exception;
 
-import com.wang.blog.web.controller.site.Views;
 import com.wang.common.common.base.BaseException;
 import com.wang.common.common.base.Result;
 import com.wang.common.common.enums.ResultEnum;
@@ -14,11 +13,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-/***
- * @classname:
- * @description:
- * @author: wjx zhijiu
- * @date: 2019/10/24 10:29
+/**
+ * @author: wjx
+ * @date: 2019/10/24
  */
 @ControllerAdvice
 @Slf4j

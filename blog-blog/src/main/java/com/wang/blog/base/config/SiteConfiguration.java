@@ -21,7 +21,8 @@ import java.util.Map;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * @author : wjx
+ * @author wjx
+ * @date 2020/8/10
  */
 @Configuration
 @EnableAsync
@@ -67,10 +68,4 @@ public class SiteConfiguration {
         fastConverter.setFastJsonConfig(fastJsonConfig);
         return fastConverter;
     }
-
-//    @Bean
-//    public HttpMessageConverters httpMessageConverters(){
-//        FastJsonHttpMessageConverter jsonHttpMessageConverter = fastJsonHttpMessageConverter();
-//        return new HttpMessageConverters(jsonHttpMessageConverter);
-//    }
 }

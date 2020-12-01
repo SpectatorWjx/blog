@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * 控制器
- * created by wjx
- * on 2019/1/18
+ * @author  wjx
+ * @date  2019/1/18
  */
 @Component
 public class ControlsDirective extends TemplateDirective {

@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * resource lock
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 public class ResourceLock {
 

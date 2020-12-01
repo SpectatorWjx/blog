@@ -3,7 +3,7 @@ package com.wang.blog.base.shiro.tags;
 
 /**
  * @author wjx
- * @date 2019/12/10 11:58
+ * @date 2019/12/10
  */
 public class LacksRoleTag extends RoleTag {
     @Override
