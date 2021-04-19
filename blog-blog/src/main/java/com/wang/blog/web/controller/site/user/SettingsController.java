@@ -2,26 +2,28 @@ package com.wang.blog.web.controller.site.user;
 
 import com.wang.blog.base.lang.Consts;
 import com.wang.blog.base.utils.FileKit;
-import com.wang.blog.base.utils.image.ImageUrlUtil;
 import com.wang.blog.service.SecurityCodeService;
 import com.wang.blog.service.UserService;
-import com.wang.blog.service.mongo.MongoService;
+import com.wang.blog.service.upyun.UpYunService;
 import com.wang.blog.vo.AccountProfile;
-import com.wang.blog.vo.ImageVo;
 import com.wang.blog.vo.UserVO;
 import com.wang.blog.web.controller.BaseController;
 import com.wang.blog.web.controller.site.Views;
 import com.wang.blog.web.controller.site.posts.UploadController;
 import com.wang.common.common.base.Result;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.Assert;
+import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author wjx
@@ -33,7 +35,7 @@ public class SettingsController extends BaseController {
     @Autowired
     private UserService userService;
     @Autowired
-    private MongoService mongoService;
+    private UpYunService upYunService;
     @Autowired
     private SecurityCodeService securityCodeService;
 
@@ -116,7 +118,9 @@ public class SettingsController extends BaseController {
     public UploadController.UploadResult updateAvatar(@RequestParam(value = "file", required = false) MultipartFile file){
         UploadController.UploadResult result = new UploadController.UploadResult();
         AccountProfile profile = getProfile();
-
+        ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = servletRequestAttributes.getRequest();
+        String crop = request.getParameter("crop");
         // 检查空
         if (null == file || file.isEmpty()) {
             return result.error(UploadController.errorInfo.get("NOFILE"));
@@ -131,9 +135,25 @@ public class SettingsController extends BaseController {
 
         // 保存图片
         try {
-            ImageVo imageVo = mongoService.saveFile(file, null, null);
-            String path = ImageUrlUtil.getImageUrl(imageVo.getId());
-
+            String path = "";
+            if(siteOptions.getValue("storage_scheme").equals("upyun")) {
+                String bucket_name = siteOptions.getValue("upyun_oss_bucket");
+                String operator = siteOptions.getValue("upyun_oss_operator");
+                String operator_key = siteOptions.getValue("upyun_oss_password");
+                String domain = siteOptions.getValue("upyun_oss_domain");
+                String src = siteOptions.getValue("upyun_oss_src");
+                String savePath = upYunService.upload(file, bucket_name, operator, operator_key, src);
+                if(!StringUtils.isEmpty(savePath)){
+                    if (StringUtils.isNotBlank(crop)) {
+                        Integer[] imageSize = siteOptions.getIntegerArrayValue(crop, Consts.SEPARATOR_X);
+                        int height = ServletRequestUtils.getIntParameter(request, "height", imageSize[1]);
+                        int width = ServletRequestUtils.getIntParameter(request, "width", imageSize[0]);
+                        path = domain+savePath+"!/both/"+width+"x"+height;
+                    } else {
+                        path = domain + savePath+"!/both/"+250+"x"+250;
+                    }
+                }
+            }
             AccountProfile user = userService.updateAvatar(profile.getId(), path);
             putProfile(user);
 

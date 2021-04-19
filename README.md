@@ -4,12 +4,12 @@
 博客
 
 #### 软件架构
-springboot+jpa+freemarker+mysql+mongo
+springboot+jpa+freemarker+mysql
 maven
 
 #### 安装教程
 
-1.  mysql，mongo安装
+1.  mysql安装
 2.  java环境
 3.  存储服务等搭建
 

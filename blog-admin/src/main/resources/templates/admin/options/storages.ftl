@@ -3,7 +3,6 @@
         <label class="col-sm-2 control-label">存储方式</label>
         <div class="col-sm-3">
             <select class="form-control" name="storage_scheme" data-select="${options['storage_scheme']}">
-                <option value="native">本地存储</option>
                 <option value="upyun">又拍云</option>
             </select>
         </div>

@@ -96,7 +96,6 @@ public class ShiroConfiguration {
         hashMap.put("/post/submit", "authc");
         hashMap.put("/post/delete/*", "authc");
         hashMap.put("/post/upload", "authc");
-        hashMap.put("/mongo/upload", "anon");
 
         shiroFilter.setFilterChainDefinitionMap(hashMap);
         return shiroFilter;

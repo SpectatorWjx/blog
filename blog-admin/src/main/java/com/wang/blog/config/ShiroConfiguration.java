@@ -71,7 +71,6 @@ public class ShiroConfiguration {
          */
         Map<String, String> hashMap = new LinkedHashMap<>();
         hashMap.put("/login", "anon");
-        hashMap.put("/mongo/upload", "anon");
         hashMap.put("/reject", "anon");
 
         hashMap.put("/admin/channel/list", "authc,perms[channel:list]");

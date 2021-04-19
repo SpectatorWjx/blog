@@ -234,11 +234,6 @@
             <artifactId>qiniu-java-sdk</artifactId>
             <version>${qiniu.sdk.version}</version>
         </dependency>
-        <!-- mongodb -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        </dependency>
         <!--   图片压缩  -->
         <dependency>
             <groupId>net.coobird</groupId>

@@ -53,10 +53,6 @@ spring:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-  data: #mongoDB配
-    mongodb:
-      file:
-        uri: mongodb://root:root@localhost:27017/file
   mvc:
     view:
       prefix: /

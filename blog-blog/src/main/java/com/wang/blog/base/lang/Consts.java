@@ -10,7 +10,7 @@ public interface Consts {
 	/**
 	 * 默认头像
 	 */
-	String AVATAR = "https://delpast.com/image/thumbnail/IMGTAB_3f4b2753d81f4ee1a4e1b7903eb2e967";
+	String AVATAR = "https://upyun.delpast.com/background/%E9%BB%91%E5%AE%A2.png";
 
 	/**
 	 * id 加密

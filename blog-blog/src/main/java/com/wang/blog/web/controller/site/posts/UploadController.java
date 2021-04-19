@@ -3,10 +3,7 @@ package com.wang.blog.web.controller.site.posts;
 import com.wang.blog.base.lang.Consts;
 import com.wang.blog.base.utils.FileKit;
 import com.wang.blog.base.utils.image.ImageCheckUtil;
-import com.wang.blog.base.utils.image.ImageUrlUtil;
-import com.wang.blog.service.mongo.MongoService;
 import com.wang.blog.service.upyun.UpYunService;
-import com.wang.blog.vo.ImageVo;
 import com.wang.blog.web.controller.BaseController;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +18,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -33,10 +29,6 @@ import java.util.HashMap;
 @Controller
 @RequestMapping("/post")
 public class UploadController extends BaseController {
-
-
-    @Autowired
-    private MongoService mongoService;
 
     @Autowired
     private UpYunService upYunService;
@@ -102,18 +94,6 @@ public class UploadController extends BaseController {
                     } else {
                         path = domain + savePath;
                     }
-                }
-            }
-            if(StringUtils.isEmpty(path)) {
-                if (StringUtils.isNotBlank(crop)) {
-                    Integer[] imageSize = siteOptions.getIntegerArrayValue(crop, Consts.SEPARATOR_X);
-                    int width = ServletRequestUtils.getIntParameter(request, "width", imageSize[0]);
-                    int height = ServletRequestUtils.getIntParameter(request, "height", imageSize[1]);
-                    ImageVo imageVo = mongoService.saveFile(file, height, width);
-                    path = ImageUrlUtil.getImageUrl(imageVo.getId().toString());
-                } else {
-                    ImageVo imageVo = mongoService.saveFile(file, null, null);
-                    path = ImageUrlUtil.getOriginalImageUrl(imageVo.getId().toString());
                 }
             }
             //鉴黄

@@ -10,10 +10,7 @@
 
 import com.wang.blog.base.lang.Consts;
 import com.wang.blog.base.utils.FileKit;
-import com.wang.blog.base.utils.image.ImageUrlUtil;
 import com.wang.blog.config.SiteOptions;
-import com.wang.blog.vo.ImageVo;
-import com.wang.blog.service.mongo.MongoService;
 import com.wang.blog.service.upyun.UpYunService;
 import com.wang.blog.web.controller.BaseController;
 import org.apache.commons.lang3.StringUtils;
@@ -42,9 +39,6 @@ import java.util.HashMap;
 public class UploadController extends BaseController {
     @Autowired
     protected SiteOptions siteOptions;
-
-    @Autowired
-    private MongoService mongoService;
 
     @Autowired
     private UpYunService upYunService;
@@ -96,7 +90,6 @@ public class UploadController extends BaseController {
         // 保存图片
         try {
             String path = "";
-
             if(siteOptions.getValue("storage_scheme").equals("upyun")){
 
                 String bucket_name = siteOptions.getValue("upyun_oss_bucket");
@@ -116,18 +109,6 @@ public class UploadController extends BaseController {
                     } else {
                         path = domain + savePath;
                     }
-                }
-            }
-            if(StringUtils.isEmpty(path)) {
-                if (StringUtils.isNotBlank(crop)) {
-                    Integer[] imageSize = siteOptions.getIntegerArrayValue(crop, Consts.SEPARATOR_X);
-                    int width = ServletRequestUtils.getIntParameter(request, "width", imageSize[0]);
-                    int height = ServletRequestUtils.getIntParameter(request, "height", imageSize[1]);
-                    ImageVo imageVo = mongoService.saveFile(file, height, width);
-                    path = ImageUrlUtil.getImageUrl(imageVo.getId().toString());
-                } else {
-                    ImageVo imageVo = mongoService.saveFile(file, null, null);
-                    path = ImageUrlUtil.getOriginalImageUrl(imageVo.getId().toString());
                 }
             }
             result.ok(errorInfo.get("SUCCESS"));

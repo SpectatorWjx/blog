@@ -12,7 +12,7 @@ public interface Consts {
 	/**
 	 * 默认头像
 	 */
-	String AVATAR = "https://blogad.delpast.com/mongo/view/1";
+	String AVATAR = "https://upyun.delpast.com/background/%E9%BB%91%E5%AE%A2.png";
 	
 	/**
 	 * 分隔符
