@@ -11,6 +11,7 @@
             <div class="gh-foot-min-back hidden-xs hidden-sm">
                 <!-- 请保留此处标识-->
                 <span class="footer-nav-item">Powered by <a href="https://github.com/SpectatorWjx" target="_blank">myBlog</a></span>
+                <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" data-link="my">本网站由<img src="../dist/images/logo/upyun_logo.png" style="height: 20px;width: 40px">提供CDN加速/云存储服务</a>
             </div>
         </div>
     </div>

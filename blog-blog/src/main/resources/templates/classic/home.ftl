@@ -76,6 +76,8 @@
               <!-- 请保留此处标识-->
               <span class="footer-nav-item">Powered by <a href="" target="_blank">myBlog</a></span>
               <span class="footer-nav-item">眼前的黑不是黑，你说的白是什么白</span>
+              <br>
+              <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" data-link="my">本网站由<img src="./dist/images/logo/upyun_logo.png" style="height: 20px;width: 40px">提供CDN加速/云存储服务</a>
             </div>
           </div>
         </div>
