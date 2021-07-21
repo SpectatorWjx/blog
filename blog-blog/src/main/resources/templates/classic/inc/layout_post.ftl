@@ -64,6 +64,7 @@
         }
         #canvas {
             position:absolute;
+            width: 100%;
         }
         #body_content{
             position: absolute;
