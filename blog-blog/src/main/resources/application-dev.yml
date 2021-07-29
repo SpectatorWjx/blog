@@ -40,9 +40,9 @@ spring:
     #continue-on-error: false
     #sql-script-encoding: utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://118.31.57.194:3306/blog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
-    password: root
+    password: Spectator#0320
     hikari:
       minimum-idle: 3
       maximum-pool-size: 10
@@ -93,7 +93,6 @@ site:
     # 评论开关
     comment: true
   options:
-    theme: classic
     storage_max_width: 800
     storage_limit_size: 20
     editor: markdown

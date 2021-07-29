@@ -2,9 +2,8 @@ package com.wang.blog.modules.hook.interceptor;
 
 import com.wang.blog.vo.AccountProfile;
 import com.wang.blog.vo.PostVO;
-import com.wang.blog.modules.hook.interceptor.InterceptorHookSupport;
 import com.wang.blog.service.CommentService;
-import com.wang.blog.web.controller.site.ChannelController;
+import com.wang.blog.controller.site.ChannelController;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.BeanUtils;

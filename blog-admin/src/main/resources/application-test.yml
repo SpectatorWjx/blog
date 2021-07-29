@@ -87,7 +87,6 @@ site:
     # 评论开关
     comment: true
   options:
-    theme: classic
     storage_max_width: 800
     storage_limit_size: 20
     editor: markdown

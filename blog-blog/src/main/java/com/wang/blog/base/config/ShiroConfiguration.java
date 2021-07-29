@@ -88,7 +88,6 @@ public class ShiroConfiguration {
          */
         Map<String, String> hashMap = new LinkedHashMap<>();
         hashMap.put("/dist/**", "anon");
-        hashMap.put("/theme/**", "anon");
         hashMap.put("/login", "anon");
         hashMap.put("/user/**", "authc");
         hashMap.put("/settings/**", "authc");

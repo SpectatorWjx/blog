@@ -40,7 +40,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/dist/**")
                 .addResourceLocations("classpath:/static/dist/");
-        registry.addResourceHandler("/theme/*/dist/**")
+        registry.addResourceHandler("/*/dist/**")
                 .addResourceLocations("classpath:/templates/");
     }
 

@@ -1,4 +1,4 @@
-<#include "/classic/inc/layout.ftl"/>
+<#include "/inc/layout.ftl"/>
 
 <@layout "消息提示">
 
