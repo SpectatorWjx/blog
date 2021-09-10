@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8090
   use-forward-headers: true
 spring:
   devtools:
@@ -40,7 +40,7 @@ spring:
     #continue-on-error: false
     #sql-script-encoding: utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://106.75.119.17:3306/blog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
     password: Spectator#0320
     hikari:
