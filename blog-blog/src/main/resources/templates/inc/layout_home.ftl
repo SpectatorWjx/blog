@@ -15,14 +15,14 @@
     <meta property="og:url" content="https://delpast.com.com/" />
     <title>旁观者的博客 - ${options['site_name']}</title>
     <link rel="shortcut icon" href="${options['site_version']}/dist/images/logo/m.png">
-    <link rel="stylesheet" href="https://www.bootcss.com/p/buttons/css/buttons.css">
+    <link rel="stylesheet" href="${options['site_version']}/dist/css/buttons.css">
     <link rel="stylesheet" id="patternfly-adjusted-css" href="${options['site_version']}/dist/css/app.css"
           type="text/css" media="all">
-    <link href="https://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="${options['site_version']}/dist/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script type="text/javascript" src="${options['site_version']}/dist/js/jquery.min.js"></script>
 
-    <script type="text/javascript" src="https://cdn.bootcss.com//bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${options['site_version']}/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
     <style>
         #main article { border-bottom: none; }
         body{
