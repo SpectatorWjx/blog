@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import java.util.*;
 
@@ -50,8 +51,12 @@ public class ChannelServiceImpl implements ChannelService {
 	@Override
 	@Transactional(rollbackFor = RuntimeException.class)
 	public void update(ChannelEntity channel) {
-		Optional<ChannelEntity> optional = channelRepository.findById(channel.getId());
-		ChannelEntity po = optional.orElse(new ChannelEntity());
+		ChannelEntity po;
+		if(StringUtils.isEmpty(channel.getId())) {
+			po = new ChannelEntity();
+		} else{
+			po = channelRepository.findById(channel.getId()).orElse(new ChannelEntity());
+		}
 		BeanUtils.copyProperties(channel, po);
 		channelRepository.save(po);
 	}

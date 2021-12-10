@@ -97,8 +97,12 @@ public class UploadController extends BaseController {
                 }
             }
             //鉴黄
-            if(!ImageCheckUtil.checkPornByUrl(path).equals("pass")){
-                return result.error(errorInfo.get("PORN"));
+            try {
+                if (!ImageCheckUtil.checkPornByUrl(path).equals("pass")) {
+                    return result.error(errorInfo.get("PORN"));
+                }
+            }catch (Exception e){
+                e.printStackTrace();
             }
             result.ok(errorInfo.get("SUCCESS"));
             result.setName(fileName);
