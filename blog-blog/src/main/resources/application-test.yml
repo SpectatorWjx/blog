@@ -40,9 +40,9 @@ spring:
     #continue-on-error: false
     #sql-script-encoding: utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://spectator.mysql.rds.aliyuncs.com:3306/blog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
-    username: root
-    password: 123456
+    url: jdbc:mysql://mysql.delpast.com:3306/db_blog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: xiangge
+    password: Spectator#0320
     hikari:
       minimum-idle: 3
       maximum-pool-size: 10

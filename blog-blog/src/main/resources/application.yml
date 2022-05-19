@@ -1,4 +1,4 @@
 spring:
-#  profiles:
-#    #dev本地，prod 正式，test 测试
-#    active: dev
+  profiles:
+    #dev本地，prod 正式，test 测试
+    active: test
