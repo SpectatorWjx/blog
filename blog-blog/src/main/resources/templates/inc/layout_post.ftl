@@ -128,6 +128,6 @@
         });
     });
 </script>
-<script src="https://cdn.jsdelivr.net/gh/SpectatorWjx/js_live2d@v1.0/autoload.js" type="text/javascript"></script>
+<script src="https://live2d.delpast.com/autoload.js" type="text/javascript"></script>
 </html>
 </#macro>
