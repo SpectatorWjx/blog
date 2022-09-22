@@ -9,11 +9,11 @@
     <meta name="description" content="网站的引导页,${options['site_description']}" />
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="无来处" />
+    <meta property="og:title" content="随心小记" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://delpast.com/logo.png" />
     <meta property="og:url" content="https://delpast.com.com/" />
-    <title>旁观者的博客 - ${options['site_name']}</title>
+    <title>首页 - ${options['site_name']}</title>
     <link rel="shortcut icon" href="${options['site_version']}/dist/images/logo/m.png">
     <link rel="stylesheet" href="${options['site_version']}/dist/css/buttons.css">
     <link rel="stylesheet" id="patternfly-adjusted-css" href="${options['site_version']}/dist/css/app.css"

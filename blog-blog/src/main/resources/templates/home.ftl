@@ -61,7 +61,7 @@
               <a href="/index" class="button button-glow button-border button-rounded button-primary"  rel="nofollow" ><i class="fa fa-vimeo-square"></i>进入主页</a>&nbsp&nbsp&nbsp&nbsp
             </p>
             <p hidden>
-              本站是一个博客网站，网站名称：delpast，域名备案名为随心小记，本站主要用于博文记录，包括编程相关的技术知识和问题记录，或者分享一些个人故事心得，天下皆白，唯我独黑,做一个旁观者。
+              本站是一个博客网站，网站名称：delpast，域名备案名为 随心小记，本站主要用于博文记录，包括编程相关的技术知识和问题记录，或者分享一些个人故事心得，天下皆白，唯我独黑,做一个旁观者。
               作为本站的开发者，希望将本站做成开放式的，对外开放注册，支持注册用户发表文章（最好是原创文章）或者对他人文章发表评论，后续旁观者也会持续发表文章，丰富本站内容。同时，本站欢迎其他网站互为友链。
             </p>
             <p  hidden>此放彼放，此方彼方，此岸彼岸，此生彼生，确实是真的放下了。</p>
@@ -70,7 +70,7 @@
           </div>
           <div class="home-bottom">
             <div>
-              <span class="footer-nav-item">© 2019-2021  随心小记 <a href="http://www.beian.miit.gov.cn"  rel="nofollow" >黑ICP备17009694号-2 </a>All Rights Reserved.</span>
+              <span class="footer-nav-item">© 2019-2022  随心小记 <a href="http://www.beian.miit.gov.cn"  rel="nofollow" >黑ICP备17009694号-2 </a>All Rights Reserved.</span>
             </div>
             <div class="gh-foot-min-back hidden-xs hidden-sm">
               <!-- 请保留此处标识-->
