@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.wang</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>blog-common</artifactId>
             <version>0.0.1</version>
         </dependency>
     </dependencies>
