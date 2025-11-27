@@ -33,34 +33,34 @@
                     <@controls name="register">
                         <fieldset class="form-group">
                             <a href="${base}/register" class="btn btn-default btn-block">注册</a>
-<#--                            <p class="register-third-login">-->
-<#--                                <span>快速登陆：</span>-->
-<#--                                <#if site.hasValue("qq_app_id")>-->
-<#--                                    <a href="${base}/oauth/callback/call_qq" class="third-login" target="_blank">-->
-<#--                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/qq.png" alt="三方图片"/>-->
-<#--                                    </a>-->
-<#--                                </#if>-->
-<#--                                <#if site.hasValue("weibo_client_id")>-->
-<#--                                    <a href="${base}/oauth/callback/call_weibo" class="third-login" target="_blank">-->
-<#--                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/weibo.png" alt="三方图片"/>-->
-<#--                                    </a>-->
-<#--                                </#if>-->
-<#--                                <#if site.hasValue("github_client_id")>-->
-<#--                                    <a href="${base}/oauth/callback/call_github" class="third-login wwwHidden" target="_blank">-->
-<#--                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/github.jpg" alt="三方图片"/>-->
-<#--                                    </a>-->
-<#--                                </#if>-->
-<#--                                <#if site.hasValue("alipay_client_id")>-->
-<#--                                    <a href="${base}/oauth/callback/call_alipay" class="third-login wwwHidden" target="_blank">-->
-<#--                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/alipay.jpg" alt="三方图片"/>-->
-<#--                                    </a>-->
-<#--                                </#if>-->
-<#--                                <#if site.hasValue("gitee_client_id")>-->
-<#--                                    <a href="${base}/oauth/callback/call_gitee"  class="third-login wwwHidden" target="_blank">-->
-<#--                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/gitee.jpg" alt="三方图片"/>-->
-<#--                                    </a>-->
-<#--                                </#if>-->
-<#--                            </p>-->
+                            <p class="register-third-login">
+                                <span>快速登陆：</span>
+                                <#if site.hasValue("qq_app_id")>
+                                    <a href="${base}/oauth/callback/call_qq" class="third-login" target="_blank">
+                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/qq.png" alt="三方图片"/>
+                                    </a>
+                                </#if>
+                                <#if site.hasValue("weibo_client_id")>
+                                    <a href="${base}/oauth/callback/call_weibo" class="third-login" target="_blank">
+                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/weibo.png" alt="三方图片"/>
+                                    </a>
+                                </#if>
+                                <#if site.hasValue("github_client_id")>
+                                    <a href="${base}/oauth/callback/call_github" class="third-login wwwHidden" target="_blank">
+                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/github.jpg" alt="三方图片"/>
+                                    </a>
+                                </#if>
+                                <#if site.hasValue("alipay_client_id")>
+                                    <a href="${base}/oauth/callback/call_alipay" class="third-login wwwHidden" target="_blank">
+                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/alipay.jpg" alt="三方图片"/>
+                                    </a>
+                                </#if>
+                                <#if site.hasValue("gitee_client_id")>
+                                    <a href="${base}/oauth/callback/call_gitee"  class="third-login wwwHidden" target="_blank">
+                                        <img class="third-login-img" src="${options['site_version']}/dist/images/oauth/gitee.jpg" alt="三方图片"/>
+                                    </a>
+                                </#if>
+                            </p>
                         </fieldset>
                     </@controls>
                 </form>
@@ -71,11 +71,11 @@
 
 <script src="https://static.geetest.com/static/tools/gt.js"></script>
 <script type="text/javascript">
-    // $(function(){
-    //     if(window.location.host != "delpast.com"){
-    //         $('.wwwHidden').css('display','none');
-    //     }
-    // });
+    $(function(){
+        if(window.location.host != "delpast.com"){
+            $('.wwwHidden').css('display','none');
+        }
+    });
     $.ajax({
         url: "captcha/register?t=" + (new Date()).getTime(),
         type: "get",

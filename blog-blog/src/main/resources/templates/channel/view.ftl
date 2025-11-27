@@ -111,7 +111,7 @@
             </li>
         </ul>
         <div class="opacity-background">
-            <#include "/inc/right.ftl"/>
+            <#include "../inc/right.ftl"/>
         </div>
     </div>
 </div>
@@ -275,5 +275,5 @@
 </style>
 </@layout_post>
 <#else>
-    <#include "/404.ftl"/>
+    <#include "../404.ftl"/>
 </#if>
