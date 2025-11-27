@@ -64,7 +64,7 @@
                         <!-- 只打common, image，jar包-->
                         <include>
                             <groupId>com.wang</groupId>
-                            <artifactId>common</artifactId>
+                            <artifactId>blog-common</artifactId>
                         </include>
                     </includes>
                 </configuration>

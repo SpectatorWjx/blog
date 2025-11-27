@@ -5,6 +5,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>blog-common</module>
+        <module>blog-blog</module>
+        <module>blog-admin</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
