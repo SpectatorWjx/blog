@@ -70,7 +70,7 @@
           </div>
           <div class="home-bottom">
             <div>
-              <span class="footer-nav-item">© 2019-2022  随心小记 <a href="http://www.beian.miit.gov.cn"  rel="nofollow" >黑ICP备17009694号-2 </a>All Rights Reserved.</span>
+              <span class="footer-nav-item">${options['site_copyright']} <a href="https://beian.miit.gov.cn/"  rel="nofollow" >${options['site_icp']} </a>All Rights Reserved.</span>
             </div>
             <div class="gh-foot-min-back hidden-xs hidden-sm">
               <!-- 请保留此处标识-->

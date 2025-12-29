@@ -118,7 +118,7 @@
         <!-- To the right -->
         <div class="pull-right hidden-xs">${site.version}</div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2020 <span class="footer-nav-item"><a href="http://www.beian.miit.gov.cn">黑ICP备17009694号-2 </a></span>.</strong> All rights reserved.
+        <strong>${options['site_copyright']} <span class="footer-nav-item"><a href="https://beian.miit.gov.cn/">${options['site_icp']} </a></span>.</strong> All rights reserved.
     </footer>
 </body>
 </html>

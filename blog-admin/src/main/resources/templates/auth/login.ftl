@@ -24,7 +24,7 @@
         </div>
     </div>
 </div>
-<div style="width: 100%; bottom: 0px;box-sizing: border-box;position: absolute;text-align:center">© 2019-2021  随心小记 <a href="http://www.beian.miit.gov.cn">黑ICP备17009694号-2 </a>All Rights Reserved.
+<div style="width: 100%; bottom: 0px;box-sizing: border-box;position: absolute;text-align:center">${options['site_copyright']} <a href="https://beian.miit.gov.cn/">${options['site_icp']} </a>All Rights Reserved.
     <div class="gh-foot-min-back hidden-xs hidden-sm">
         <!-- 请保留此处标识-->
         <span class="footer-nav-item">Powered by <a href="https://github.com/SpectatorWjx" target="_blank">myBlog</a></span>
